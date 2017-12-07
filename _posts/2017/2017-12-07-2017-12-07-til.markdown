@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2017/12/07 TIL"
+date: "2017-12-07 22:16"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* Jekyll 기반의 블로그를 생성하고 사용할 준비를 진행함
+  - 폰트(나눔고딕)
+  - 메인 페이지 구성
+  - favicon
+  - 블로그 대표 베너 제작
+* Atom 을 이용한 마크다운 에디터 환경 설정
+
+### To-Do
+* Django
+  - Semantic tag 작성
+  - User모델 이용한 회원가입, 로그인, 로그아웃 구현
+* Blog
+  - 블로그 포스트 이전 [티스토리 블로그](kirade.tistory.com) -> [Jekyll 블로그](kirade.github.io)
+  - 구글 애드센스, 구글 사이트맵
+  - About 카테고리에 소개 생각
+
+### Reference
+* https://jekyllrb-ko.github.io Jekyll docs in Korean(Old version)
+* https://jekyllrb.com Jekyll docs in English(Current Version)

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -9,7 +11,7 @@ html {
     padding: 0;
 }
 html {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Nanum Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -347,7 +349,7 @@ html {
     overflow-x: hidden;
 }
 html {
-    font-family: "PT Serif",Georgia,"Times New Roman",serif;
+    font-family: "Nanum Gothic", "PT Serif",Georgia,"Times New Roman",serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -361,7 +363,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "PT Sans",Helvetica,Arial,sans-serif;
+    font-family: "Nanum Gothic", "PT Sans",Helvetica,Arial,sans-serif;
     font-weight: 400;
     color: #313131;
     letter-spacing: -.025rem;
