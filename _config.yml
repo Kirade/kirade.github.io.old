@@ -1,6 +1,6 @@
 # Site Info
-title: 1 Day 1 Commit 개발로그
-tagline: 'Commit Everyday'
+title: 1 Day 1 Commit
+tagline: 'Coding Logs'
 description: Web Developer using python
 baseurl: ""
 url: http://kirade.github.io
@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: Jaeyoung, Heo
-  description: Struggle hard to be a professinal
+  description: 허재영 ( Jaeyoung, Heo )<br/>Struggle hard to be a professinal
   gravatar: https://github.com/kirade # md5 hash of your email address
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
@@ -33,7 +33,7 @@ author:
     facebook:  https://www.facebook.com/Jaeyoung.Heo1
     # twitter:   https://twitter.com/Li_Zhihao
     # weibo:     http://weibo.com/41173780
-    #email:     jay.jaeyoung@gmail.com
+    email:     mailto:jay.jaeyoung@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -46,7 +46,7 @@ nav:
   About:          
     - '/about/'
   Github Project: 
-    - 'http://codinfox.github.io/'
+    - 'http://kirade.github.io/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
