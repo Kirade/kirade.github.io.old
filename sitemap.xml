@@ -11,9 +11,11 @@
     {% for page in site.pages %}
     {% if page.layout != nil %}
     {% if page.layout != 'feed' %}
+    {% if page.title != "404: Page not found"}
     <url>
         <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
     </url>
+    {% endif %}
     {% endif %}
     {% endif %}
     {% endfor %}
