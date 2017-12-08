@@ -182,6 +182,12 @@ img {
     margin: 0 0 1rem;
     border-radius: 5px;
 }
+
+img .center-image{
+  display: block;
+  margin: 0 auto;
+}
+
 table {
     margin-bottom: 1rem;
     width: 100%;
@@ -956,10 +962,4 @@ a.pagination-item:hover {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
-}
-
-.center-image
-{
-    margin: 0 auto;
-    display: block;
 }
