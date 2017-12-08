@@ -21,7 +21,7 @@ tags: Web HTML5
 
 ## Study
 
-![시맨틱 태그(Semantic Tag)](images/2017/12/시멘틱태그.gif)
+![시맨틱 태그(Semantic Tags )](https://kirade.github.io/images/2017/12/semantic_tags.gif){: .center-image}
 
 1. 종류  
 시맨틱 태그는 위에 첨부되어 있는 이미지에 볼 수 있는 주요 태그들 이외에도 다양한 태그가 존재한다. 각 태그의 의미를 해석할 때에는 시맨틱이라는 의미론적인 정의에 걸맞게 태그의 의미를 해석하는것이 도움이된다.
