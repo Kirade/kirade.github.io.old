@@ -183,7 +183,7 @@ img {
     border-radius: 5px;
 }
 
-img .center-image{
+img.center-image{
   display: block;
   margin: 0 auto;
 }
