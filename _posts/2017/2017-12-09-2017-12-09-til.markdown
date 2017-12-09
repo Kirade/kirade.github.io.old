@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2017-12-09 TIL"
+date: "2017-12-09 22:21"
+category: TIL
+tag: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Jekyll
+  - 구글 애널리틱스 적용
+  - 메인페이지 링크 위치 변경 (Tag -> Category)
+  - 이전 블로그 게시글 이전 (TIL, Git, etc)
+* Blog
+  - python 개발환경 세팅 (pyenv, autoenv, virtualenv) 포스트
+
+### To-Do
+* Django
+  - User모델 이용한 회원가입, 로그인, 로그아웃 구현
+* 개발 서적
+  - 클린 코드, 조엘 온 소프트웨어
+
+### Reference
+* [구글 애널리틱스](analytics.google.com)
