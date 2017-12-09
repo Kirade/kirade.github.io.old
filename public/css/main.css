@@ -37,8 +37,12 @@ a:focus,
 a:hover {
     text-decoration: underline;
 }
+
+h2{
+  color: #6a9fb5
+}
+
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -364,7 +368,6 @@ html {
     text-rendering: optimizelegibility;
 }
 h1,
-h2,
 h3,
 h4,
 h5,

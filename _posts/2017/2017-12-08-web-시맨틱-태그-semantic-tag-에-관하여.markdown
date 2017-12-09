@@ -19,6 +19,8 @@ tags: Web HTML5
 
 따라서, 여기서 HTML5의 특징으로 보는 정의해 볼 수 있는 Semantic Tags는 이와 같은 맥락에서 `의미를 가지고 있는 태그의 단위`정도로 이해를 한다면 적절할 것으로 보인다.
 
+---
+
 ## Study
 
 ![시맨틱 태그(Semantic Tags )](https://kirade.github.io/images/2017/12/semantic_tags.gif){: .center-image}
@@ -49,8 +51,7 @@ tags: Web HTML5
 
   또한, 검색엔진은 물론 각 태그의 의미를 명확하게함으로써 웹 사이트에 접근성을 높이는 의미있는 결과를 낳을 수 있다. 예를 들면, 시각장애인과 같은 경우 듣는것으로 의존하여 웹을 사용하는데 이때, 적절하게 시맨틱 태그가 연결되어 있다면, 해당 부분이 어떤 내용이고 어떤 의미를 담고 있는지 올바르게 선별하여 들어볼수 있는 높은 접근성을 제공할 수 있다.
 
-
-
+---
 
 ## Reference
 * [W3Schools - HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
