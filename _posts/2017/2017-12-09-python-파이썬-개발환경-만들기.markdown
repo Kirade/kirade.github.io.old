@@ -20,7 +20,7 @@ tags: Dev Python
 
 ## Study
 
-### pyenv
+# pyenv
 
 >pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
 > -Pyenv repository readme
@@ -95,7 +95,7 @@ $ pyenv shell [version]
 
 
 
-### virtual environment
+# virtual environment
 
 virtualenv 패키지는 개발 과정에서 발생하는 의존성 문제를 해결하기 위해 개발되었습니다. 예를들면 어떤 라이브러리 버전1을 사용하는 애플리케이션과 버전2를 사용하는 애플리케이션 동시에 개발해야 할때, 로컬 위치(`/urs/lib/python2.7/site-package`)에 라이브러리는 둘 중에 하나만 설치가 가능합니다. 이런 상황을 해결하기 위한 해결책이 virtualenv입니다.
 
@@ -129,7 +129,7 @@ deactivate
 
 ---
 
-### autoenv
+# autoenv
 
 autoenv 패키지가 하는 역할은 굉장히 단순하지만 귀찮은 작업을 줄여준다.
 
