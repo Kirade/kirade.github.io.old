@@ -14,6 +14,6 @@ title: Home
 ---
 <div class="tags-expo-list">
     {% for tag in site.categories %}
-    <a href="/blog/tags/#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    <a href="/blog/categories/#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
-</div>	
+</div>

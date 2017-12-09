@@ -1,0 +1,28 @@
+---
+layout: "post"
+title: "2017-12-05 TIL"
+date: "2017-12-05 13:22"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* Trello 현재 진행상황에 맞추어 재구성
+* CBV 공부하기 위해 django document 정독
+  * View, Mixin
+  - TemplateView, DetailView, ListView
+  * Multiple App을 언제 사용하는지 공부
+  - Django 1.11 -> Django 2.0버전으로 업그레이드
+
+### To-Do
+
+* 기존 FBV를 CBV로 바꾸는 작업
+* 템플릿과 만들어진 뷰 함수 연결
+* HTML5 시맨틱 태그 공부
+
+### Reference
+
+* [장고 버전 2.0 공식 문서](https://docs.djangoproject.com/en/2.0/)

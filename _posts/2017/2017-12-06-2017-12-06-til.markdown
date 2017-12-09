@@ -1,0 +1,24 @@
+---
+layout: "post"
+title: "2017-12-06 TIL"
+date: "2017-12-06 13:24"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* Django 로그인 / 로그아웃 기능 간단 구현
+* CBV로 뷰 함수들 교체
+* 발생 이슈
+  * User 모델 인스턴스를 Profile 모델의 `**kwarg`로 넘긴 후, create 메소드를 통해 생성하는데 내용이 비어있는 객체가 생성됨 일단은 attribute마다 User모델 인스턴스의 내용을 다시 재정의 해줌으로서 데이터베이스에 정상적으로 입력됨 ( username, email, password )
+* Jekyll 설치
+
+### To-Do
+
+* 로그인 기능 구현 ( 회원가입 및 로그인 관련 Form, View공부 )
+* jekyll 블로그 공부
+
+### Reference
+* [장고 2.0 레퍼런스](https://docs.djangoproject.com/en/2.0/)

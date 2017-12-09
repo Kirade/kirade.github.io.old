@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "2017/12/07 TIL"
+title: "2017-12-07 TIL"
 date: "2017-12-07 22:16"
 category: TIL
 tag: TIL

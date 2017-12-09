@@ -1,0 +1,32 @@
+---
+layout: "post"
+title: "2017-10-30 TIL"
+date: "2017-10-30 13:12"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+TIL (Today I Learned) 은 자기관리의 일환으로 많은 사람들이 사용하는 방법으로 매일매일 무엇을 했는지 적어보는 활동이다. 일반적으로 일기와 비슷합니다.
+개발자에게는 1 DAY 1 COMMIT 도 이와 같은 맥락이라고 생각합니다.
+우연하게 이를 진행하며 지식을 쌓아가는 블로거를 발견하게 되어, 좋은 동기부여가 될 것 같아 저도 진행해 보려고 합니다.
+
+
+### What I Did
+* 이전에 읽었던 Django Documentation의 튜토리얼 부분을 다시 정독하며 잊고 있었던 부분 복습
+* 간단한 상품을 판매하고, 회원관리, 배송추적 관리 기능을 가진 홈페이지 기획
+* Django에서의 setting 파일 혹은 database 접속정보에 관한 내용을 환경변수를 이용하거나 다른 비밀 폴더를 이용하여 관리하는 방법을 배움
+* Github의 마크다운 언어를 Tistory 글을 쓰는데 사용하는 방법을 배움
+
+
+### To-Do
+
+* 이전 진행중이던 Trello의 웹서비스 제작 프로젝트를 재구성하여 현재 진행중인 프로젝트에 적합하도록 변경
+* DB schema를 어떻게 구성할 것인지 생각
+
+
+### Reference
+
+* [초보몽키의 개발로그 - TIL을 하시는 프로그래머](https://wayhome25.github.io)
+*  [Django의 전반적인 개념과 기술을 설명한 위키 ](https://wikidocs.net/6632)

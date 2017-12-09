@@ -1,0 +1,36 @@
+---
+layout: "post"
+title: "[감귤이야기] 프로젝트 기획"
+date: "2017-10-31 14:57"
+category: Django
+tags: Django Web 감귤이야기
+---
+
+## Background
+
+학부 시절 배웠던 Python이라는 언어와 인턴기간에 배운 flask라는 Python기반의 마이크로프레임워크로 개발을 진행하여 Backend API서버를 제작한 경험이 있습니다. 이 경험을 바탕으로 Python을 활용해서 웹개발을 더 공부해보고자 Django라는 Python기반의 웹 프레임워크 공부를 시작하였습니다.
+
+[Django Document](https://docs.djangoproject.com/en/2.0/)에 소개되어있는 투표 앱을 만드는 튜토리얼을 모두 진행하고, 직접 배운 내용을 적용해봄은 물론 쓸모있는 웹페이지를 만들기 위해 `감귤이야기` 프로젝트를 시작하였습니다.
+
+## Draft
+
+### Level
+
+***Django Beginner***
+해당 프로젝트는 기본적으로 인터넷 쇼핑몰 사이트와 비슷한 기능을 가지지만 조금 더 간단하고 복잡한 로직이 필요하지 않은 가벼운 기능을 중심으로 개발을 진행합니다.
+
+### Functions
+* Product
+  - 상품 진열, 판매, 문의
+* User
+  - 로그인, 로그아웃, 회원가입, 회원관리
+* Board
+  - 자유게시판, FAQ
+* Delivery
+  - 배송 추적
+* Admin
+  - 관리자 사이트 UI
+
+## Reference
+* [Django Document](https://docs.djangoproject.com/en/2.0/)
+* [StackOverFlow](https://stackoverflow.com/)

@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2017-12-04 TIL"
+date: "2017-12-04 13:20"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+11월 초, 코딩테스트를 보게 되어서 11월 초에는 코딩테스트 준비를 약 2주간하고, 나머지 2주간은 면접보러 바쁘게 살았다.
+
+### What I Did
+
+* 이전까지 진행하던 장고 프로젝트 복귀
+* 홈페이지 제작에 시각적으로 더 보이기 위한 프론트 단의 템플릿 구성
+* Static Font, CSS
+* URL, View 제작
+
+### To-Do
+
+* CBV ( Basic, Mixin, Inherit ) 관련 공부
+* Django multiple app 구성은 언제 하는가
+
+###Reference
+
+* [장고 레퍼런스](https://docs.djangoproject.com/en/1.11/)

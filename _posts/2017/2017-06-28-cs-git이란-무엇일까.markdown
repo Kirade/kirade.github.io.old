@@ -1,0 +1,66 @@
+---
+layout: "post"
+title: "[CS] Git이란 무엇일까?"
+date: "2017-06-28 14:16"
+category: "Computer Science"
+tags: Git
+---
+
+## Background
+
+깃(Git)을 처음 접하게된 계기는 대학교 4학년 재학 중 졸업 프로젝트인 캡스톤 프로젝트의 일환으로 웹 서비스를 개발하는 과정에서 처음 접했다. 팀원 한 명이 제안한 기술의 일환으로 공부해 나가기 시작하였는다. 당시 JSP 를 이용하여웹 서비스를 제작하는 과정중에 있었는데, 깃을 배우며 해당 프로젝트의 소스코드의 버전을 관리 하는 방법을 배웠다. 물론 당시에는 주먹구구식으로 깃을 배웠기 때문에 정확한 사용법을 인지하지 못했기 때문에 가장 간단한 버전관리와 소스코드를 원격으로 공유하는 선에서 깃을 사용했었다.
+
+그 이후 좋은 기회를 통해 스타트업 기업에서 인턴을 하면서 깃에 대해 자세하게 공부하고 버전관리 이외의 다양한 기능들을 습득할 수 있는 기회가 있었다. 당시에 브랜치 작업을 통해 서로 다른 기능들을 개발하는 방법과, 마스터 브랜치만 사용하는 것이 아닌 본 서비스에 사용 되는 마스터 브랜치, 개발용 브랜치 등 구분을 하여 브랜치를 관리하는 법 또한 습득하였다.
+* [Git Flow](https://github.com/nvie/gitflow)
+
+
+## Study
+
+### Definition
+
+> Git (/ɡɪt/[7]) is a version control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source code management in software development,[8] but it can be used to keep track of changes in any set of files. As a distributed revision control system it is aimed at speed,[9] data integrity,[10] and support for distributed, non-linear workflows.
+>       - Wekipedia
+
+위키에 정의되어 있듯, Git은 프로그램의 소스 코드 관리를 위한 분산 버전관리 시스템이다. 리눅스의 창시자인 리누스 토발즈가 리눅스 커널 개발에 이용하려고 개발하였으며, 현재 오픈소스로 풀려 지속적으로 업데이트 되고있다.
+
+### Characteristics
+
+- 동시에 다른부분을 개발하는 병렬 개발이 가능하고 소스코드의 버전 관리가 용이하여 생산성을 높인다.
+- 소스코드의 수정 내용이 커밋 단위로 관리되고, 언제든지 다른 개발 브랜치로 checkout이 가능하여 다른 시점의 소스코드로의 이동 또한 자유롭다.
+- 분산 버전관리 시스템이기 때문에, 중앙 저장소(ex. 로컬)가 이용이 불가능해도 다시 복구가 가능하다.
+- 프로그램과 패치를 배포하는 과정이 간단해진다.
+
+### Terms
+- `Repository`
+: 저장소(Repository)는 깃 개발에 있어서 가장 기본이 되는 공간이다. 저장소에는 소스코드가 저장이 되어있다. 소스코드는 로컬은 물론 원격 저장소([Github](https://github.com), [Bitbucket](https://bitbucket.org))에 저장이 가능하다.
+- `Commit`
+: 작업한 내용을 로컬 저장소에 저장하는 과정이다. 주로 의미있는 변경단위로 사용이 되고, 설명을 커밋 메시지로 남길 수 있다.
+- `Stage`
+: 작업한 내용이 올라가는 임시 저장 영역이다. 작업한 소스코드에 변경 사항이 있다면 이 공간에 변경사항이 표시된다. 실제 커밋을 하기 위한 전단계에 위치하여 커밋할 소스를 선별할 수 있다.
+- `Tag`
+: 커밋의 임의 위치에 쉽게 찾아갈 수 있도록 붙여놓은 이름이다. 이름따라 태그를 붙이듯 의미있는 변경 단위로 만들어둔 커밋에 표시해두어 나중에 찾아가기 쉽게 만들어 둔 흔적이다.
+- `Branch`
+: 나무를 연상하면 이해하기 쉽다. 가장 중심이 되는 줄기에서 작은 나무 줄기들이 분기해서 나아가듯이, 각각의 브랜치는 해당 시점의 소스코드를 가지고 다른 기능을 개발하기 위해 분기할 수 있다.
+---
+- `Pull`
+: 원격 저장소에 있는 소스코드를 연결된 로컬 저장소에 변경사항을 적용하는 과정이다. 원격 저장소와 로컬 저장소의 버전이 다를때 자동으로 원격 저장소 내용으로 병합 작업을 한다.
+- `Push`
+: `Pull`명령어 와는 반대로 로컬저장소에 있는 내용을 원격 저장소로 병합시키는 명령어이다.
+- `Fetch`
+: 원격 저장소의 변경 이력을 로컬 저장소에서 확인하고 싶을때 `Fetch`명령어를 실행한다. 이 때, `Pull`과 같이 병합은 하지않고 변경된 이력만 확인이 된다.
+- `Merge`
+: 앞서 설명한 `Branch`로 분기하여 작업했던 내용을 다른 `Branch`와 합치는 작업이다.
+
+### GUI
+기본적으로 Git은 CLI(Command Line Interface)환경에서 사용하도록 제작되었다. 하지만 일일이 명령어를 작성하고 시각적으로 확인하는 불편함을 해소하기 위한 GUI로 만든 프로그램이 존재한다.
+
+개인적으로 Atalassian의 SourceTree를 사용한다. 직관적이고 깔끔한 인터페이스로 사용이 편리하다.
+
+### Remote Repository
+앞서 설명하였듯, 깃은 로컬 저장소와 원격 저장소 두 가지 저장소로 소스코드를 관리하는 분산 버전관리 시스템이다. 그렇다면 로컬저장소는 개인이 사용하는 PC라면 원격 저장소 역할을 하는곳이 필요할 것이다.
+
+가장 유명한 곳은 [Github](https://github.com)로 다양 한 오픈소스 프로젝트가 가장 크게 발전하고 있는 대표적인 저장소이다. 또한 SouceTree를 만든 Atalassian의 [Bitbucket](https://bitbucket.org)이라는 원격 저장소 또한 기업에서 많이 채택하고있다. 
+
+## Reference
+* [Git  간편안내서](http://rogerdudler.github.io/git-guide/index.ko.html)
+* [SourceTree](https://ko.atlassian.com/software/sourcetree)
