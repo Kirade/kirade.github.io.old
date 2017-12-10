@@ -21,7 +21,7 @@ tag: TIL
   - Semantic tag 작성
   - User모델 이용한 회원가입, 로그인, 로그아웃 구현
 * Blog
-  - 블로그 포스트 이전 [티스토리 블로그](kirade.tistory.com) -> [Jekyll 블로그](kirade.github.io)
+  - 블로그 포스트 이전 [티스토리 블로그](https://kirade.tistory.com) -> [Jekyll 블로그](https://kirade.github.io)
   - 구글 애드센스, 구글 사이트맵
   - About 카테고리에 소개 생각
 
