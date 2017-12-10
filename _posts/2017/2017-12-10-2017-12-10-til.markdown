@@ -20,7 +20,6 @@ category: TIL
 * Django
   - 로그인 관련 템플릿 Bootstrap 활용하여 제작
   - 메인 페이지, 소개 들어갈 내용 생각
-  -
 * 개발 서적
   - 클린 코드
 
