@@ -1,0 +1,31 @@
+---
+layout: "post"
+title: "2017-12-10 TIL"
+date: "2017-12-10 22:04"
+tag: TIL
+category: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Django
+  - 회원가입 폼 제작, 데이터베이스 연동 확인
+  - fontawesome, bootstrap 설치
+    - CSS 선택자, 우선순위 공부
+    - 웹사이트 header, nav bootstrap기반 재구성
+
+### To-Do
+* Django
+  - 로그인 관련 템플릿 Bootstrap 활용하여 제작
+  - 메인 페이지, 소개 들어갈 내용 생각
+  -
+* 개발 서적
+  - 클린 코드
+
+### Reference
+* [Fontawesome](http://fontawesome.io/
+)
+* [Bootstrap](http://bootstrapk.com/)
+* [CSS selector](https://code.tutsplus.com/ko/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
