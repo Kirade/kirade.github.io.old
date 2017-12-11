@@ -1,0 +1,32 @@
+---
+layout: "post"
+title: "2017-12-11 TIL"
+date: "2017-12-11 23:08"
+tag: TIL
+category: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Django
+  - 회원가입 폼 UI 제작
+  - 로그인 폼 UI 제작
+  - 회원가입 및 로그인 테스트, 모델 수정
+
+* 프로젝트 외
+  - 컴퓨터 보안 TA 활동
+  - 입사지원서 작성
+
+### To-Do
+* Django
+  - 게시판 제작
+  - 회원 정보 수정 페이지
+
+* Blog
+  - 배운 내용 중 포스팅하며 정리할 내용 생각
+
+### Reference
+* [부트스트랩](http://bootstrapk.com/css/)
+* [Django Docs](http://docs.djangoproject.com/en/2.0)
