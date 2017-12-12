@@ -733,8 +733,8 @@ a.sidebar-nav-item:hover {
     font-size: 0.75rem;
 }
 .hero img {
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     display: inline;
     margin-top: -1rem;
 }
