@@ -1,0 +1,149 @@
+---
+layout: "post"
+title: "[감귤이야기] Django 프로젝트 생성"
+date: "2017-12-12 23:02"
+category: Django
+tags: Django Web 감귤이야기
+---
+
+## Background
+`감귤이야기`라는 이름으로 시작하는 프로젝트를 진행하는 과정을 의미있는 과정이라고 생각되는 부분을 정리하려고 합니다. 이번 포스팅에서는 Django를 사용한 프로젝트에서 가장 기본이 되는 장고를 설치하는 방법과 프로젝트를 생성하고, 실제 개발을 진행할 앱을 만드는 과정을 담겠습니다.
+
+---
+
+## Install Django
+파이썬을 이용한 프로젝트를 진행할 때는, 여러 프로젝트들이 하나 뿐인 로컬환경을 공유하게 된다면, 파이썬 버전 혹은 파이썬 패키지의 호환성 혹은 의존성 문제가 발생할 가능성이 높습니다.  
+
+따라서 이런 문제를 해결하기 위해, 독립된 가상 환경을 만들고 해당 프로젝트에 맞는 파이썬 프로젝트를 시작하는 것이 가장 보편적으로 사용되는 방식입니다.
+
+### 가상 환경 구성
+여러가지 파이썬 프로젝트의 파이썬 버전을 자유롭게 바꾸어가며 개발을 가능하게 해주는 유용한 도구인 pyenv, pyenv-virtualenv, autoenv를 활용하여 가상환경을 만들겠습니다
+> * Reference :  [파이썬 개발환경 만들기](https://kirade.github.io/python/2017/12/09/python-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EB%A7%8C%EB%93%A4%EA%B8%B0/)
+> * pyenv-virtual : ```$ pip install pyenv-virtualenv```
+
+
+`mkdir`명령어를 사용하여 프로젝트를 만들 디렉토리를 만들고, pyenv의 다음 명령어를 활용하여 원하는 파이썬 버전을 설치할 수 있습니다. `VIRTUAL_ENV_NAME`은 가상환경의 이름으로 자유롭게 만들 수 있습니다.
+```SHELL
+# EXAMPLE
+# PYTHON_VERSION - 2.x.x or 3.x.x
+# VIRTUAL_ENV_NAME - django_virtual
+
+$ mkdir django_project
+$ pyenv virtualenv `PYTHON_VERSION` `VIRTUAL_ENV_NAME`
+```
+
+다음 명령어를 통해 설치된 파이썬 버전과 프로젝트 명을 확인할 수 있습니다.
+```SHELL
+$ pyenv versions
+
+# Example Result
+* system
+  3.x.x
+  2.x.x
+  3.x.x/envs/django_virtual
+  django_virtual
+```
+
+확인이 되었다면 생성한 가상환경 디렉토리에 진입하여, 현재 디렉토리에 진입하면 자동으로 가상환경에 진입할 수 있도록 pyenv의 local 설정을 진행합니다.
+```SHELL
+$ cd django_project
+$ pyenv local django_virtual
+```
+
+디렉토리에서 나갔다가 들어오면서 `$ pyenv versions`명령어로 제대로 해당 환경으로 작동하는지 확인합니다.
+```SHELL
+# 다음과 같이 `*`이 표시되면 제대로 작동한 것입니다.
+  system
+  3.x.x
+  2.x.x
+  3.x.x/envs/django_virtual
+* django_virtual
+```
+
+### 장고 설치
+가상환경이 처음 진입하면 기본적으로 생성되는 pip와 같은 패키지 이외에 어떤 패키지도 설치되어 있지 않습니다.
+
+```SHELL
+# Example
+$ pip list
+  pip (9.0.1)
+  setuptools (28.8.0)
+```
+
+이 환경에서 pip를 이용하여 장고를 설치합니다.
+```SHELL
+$ pip install django
+```
+>현재 2017.12.11 기준, django 2.0버전이 설치됩니다.
+
+설치가 완료되었다면 `$ python`명령어를 통해 진입하여 작동여부를 확인합니다.
+```python3
+>>> import django
+>>> print(django.get_versions())
+2.0
+```
+---
+
+## Make Project & App
+장고의 설치가 완료되었다면 이제 이 장고를 이용하여 프로젝트를 시작하기위한 진짜 '프로젝트' 디렉토리를 만들어야 합니다.
+
+
+### 프로젝트 생성
+
+앞서 만들어 두었던 프로젝트 디렉토리에 진입하여 다음 명령어를 입력합니다.
+```SHELL
+# EXAMPLE
+# PROJECT_NAME : myproject
+
+$ django-admin startproject 'PROJECT_NAME'
+```
+
+이 후, 다음과 같은 파일구조를 가진 프로젝트 디렉토리가 생성됩니다.
+```
+myproject/
+    manage.py
+    myproject/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+```
+
+### 앱 생성
+장고에서 큰 프레임의 역할을 하는 프로젝트를 만들었으면, 이제 무언가를 수행할 `APP`을 만들어야 합니다.
+
+>Projects vs. apps
+>
+>What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+> -Django Document
+
+생성된 프로젝트 디렉토리 안으로 이동하여, manage.py가 있는 위치에서 다음 명령어를 입력하여 앱을 생성합니다.
+```SHELL
+$ python manage.py startapp 'APP_NAME'
+```
+
+만들어진 앱의 구조입니다.
+```
+'APP_NAME'/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```
+
+### 개발용 로컬 서버
+
+여기까지 진행되었다면, 다음 명령어로 로컬환경에서 장고 서버 작동을 테스트할 수 있습니다.
+```shell
+$ python manage.py runserver
+```
+기본 포트는 8000을 이용합니다. 따라서 http://localhost:8000/'APP_NAME'을 입력하면 장고서버의 작동을 확인할 수 있습니다.
+
+---
+
+## Reference
+* [Django Document](https://docs.djangoproject.com/en/2.0/)

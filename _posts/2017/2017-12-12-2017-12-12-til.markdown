@@ -1,0 +1,29 @@
+---
+layout: "post"
+title: "2017-12-12 TIL"
+date: "2017-12-12 10:33"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* Blog
+  - `감귤이야기` 장고 설치 및 프로젝트 생성 포스팅
+
+* 프로젝트 외
+  - 컴퓨터 보안 TA (채점, 성적 수합)
+
+### To-Do
+* Django
+  - 게시판 제작
+  - 회원 정보 수정 페이지
+
+* Blog
+  - 맥 개발환경 만들기 포스팅
+
+
+### Reference
+* [Django Docs](http://docs.djangoproject.com/en/2.0)
+* [감귤이야기-프로젝트생성](https://kirade.githun.io/django/2017/12/12/감귤이야기-django-프로젝트-생성/)
