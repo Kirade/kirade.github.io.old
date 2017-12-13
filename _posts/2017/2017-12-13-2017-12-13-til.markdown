@@ -1,0 +1,33 @@
+---
+layout: "post"
+title: "2017-12-13 TIL"
+date: "2017-12-13 23:19"
+tag: TIL
+category: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Django
+  - 회원 정보 수정 페이지
+  - 로그인, 회원정보 수정 성공 페이지
+  - FAQ 템플릿 적용
+  - 게시판 제작 (틀 제작, list, detail, edit 기능)
+
+* 프로젝트 외
+  - 채점 결과물 반납
+
+### To-Do
+* Django
+  - 게시판 hit, pagination
+  - 다른 사용자 정보 접근 제한 ( 마이 페이지 등 )  
+
+* Blog
+  - 맥 개발환경 만들기 포스팅
+
+
+### Reference
+- [장고 폼 필드 접근](https://docs.djangoproject.com/en/2.0/topics/forms/#looping-over-the-form-s-fields)
+- [장고 빌트인 필터](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/)
