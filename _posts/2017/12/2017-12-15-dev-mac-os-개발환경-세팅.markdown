@@ -1,0 +1,95 @@
+---
+layout: "post"
+title: "[Dev] Mac OS 개발환경 세팅 - zsh"
+date: "2017-12-15 13:40"
+category: Dev
+tags: macOS zsh
+---
+
+## Background
+2016년 여름 인턴기간을 중, iMac을 처음 사용해보면서 Mac에 마음이 굉장이 이끌려서 그 해 가을, 모아둔 돈으로 15인치 맥프로를 구매했던 기억이 있습니다. 물론 그 맥북이 현재까지도 유용하게 잘 사용하고 있는 저의 PC입니다.
+
+윈도우는 굉장히 좋은 운영체제이고 많은 사람들이 사용하고 있지만, 개인적으로 기존의 윈도우에서 느끼지 못했던 macOS의 다양한 인상들은 강렬했습니다. 가장 크게 느꼇던 부분은 UI와 보안성 입니다. 마우스가 굳이 필요로 하지 않아도 될만큼 강력한 터치패드의 기능과 윈도우에서는 하루의 일과중 하나였던 백신 프로그램 작동에서 벗어나게 해준 보안성은 만족스러웠습니다. ~~사실 그냥 맥북이 이뻐서 샀습니다.~~
+
+서두가 길었습니다. 이 포스팅의 중심 주제는 macOS에서의 개발을 하는데 편리함을 높여주는 다양한 툴에 대해 자세히 알아보는것입니다. 한 포스팅에 한 주제씩 담을 예정입니다.
+
+가장 먼저 소개드릴 프로그램은 zsh입니다.
+
+## Study
+
+### Origin
+>Paul Falstad wrote the first version of Zsh in 1990 while a student at Princeton University. The name zsh derives from the name of Yale professor Zhong Shao (then an Assistant Professor at Princeton University) — Paul Falstad regarded Shao's login-id, "zsh", as a good name for a shell.
+> -wikipedia
+
+zsh은 이름은 1990년 Paul Falstad가 첫 버전을 만들었다. zsh이라는 이름은 예일 교수인 Zhong Shao의 로그인 아이디 "zsh"에서 적당한 이름이라고 생각하여 쉘 이름으로 정했다.
+
+### Installation
+
+기본적으로 macOS에서는 Bash(Bourne-again) shell을 기본으로 사용한다. 이를 zsh로 변경하고 기본으로 사용하기 위해서는 다음과 같은 절차가 필요하다.
+
+macOS의 패키지 관리 툴인 brew를 이용하여 설치한다.
+
+```Shell
+$ brew install zsh zsh-completions
+```
+
+> **zsh-completions**
+>Additional completion definitions for Zsh.
+>This projects aims at gathering/developing new completion scripts that are not available in Zsh yet. The scripts may be contributed to the Zsh project when stable enough.
+>-[zsh-completion github](https://github.com/zsh-users/zsh-completions)
+
+zsh-completions는 아직 zsh을 위한 스크립트들로 아직 zsh에 적용되지는 못한 스크립트들입니다. 이후 zsh이 stable 버전이 되면 적용될 예정입니다.
+
+또한, zsh의 다양한 third-party 플러그인 설정을 관리해주는 oh-my-zsh을 설치합니다.
+```Shell
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+설치 스크립트를 실행하면 파일을 설치하고 패스워드를 입력하면 기본 쉘을 bash에서 zsh로 변경시킵니다.
+
+####  oh-my-zsh plugin
+oh-my-zsh은 다양한 플러그인을 다루는 만큼 유용한 플러그인들이 많습니다. 그 중 하이라이팅 플러그인과, 자동완성 플러그인을 소개합니다.
+
+```Shell
+# zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+플러그인을 설치한 뒤, `~/.zshrc`파일에 plugins항목에 설치한 플러그인을 추가합니다.
+```shell
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
+```
+그리고 쉘을 명령어 `source ~/.zshrc`를 입력하여 쉘을 다시 불러오면 플러그인이 적용됩니다.
+
+이 외에도, oh-my-zsh은 2017년 기준 1000여명 이상의 contributor와 200개 이상의 플러그인을 보유하고 있습니다. 따라서, 이 플러그인들을 잘 활용하면 생산성과 편의성을 높이는 zsh을 만들수 있습니다.
+
+#### oh-my-zsh theme
+가장 시각적으로 zsh을 변화시키는 방법은 쉘의 theme를 변경시키는 것입니다. zsh의 기본테마는 `robbyrussell`입니다. 이 외에도 다양한 테마를 선택하여 자신의 입맛대로 사용할 수 있습니다.
+
+테마는 `~/.zshrc`의 `ZSH_THEME="robbyrussell"`부분을 원하는 테마의 이름으로 수정하면 됩니다.
+
+가장 많이 쓰이는 테마는 `robbyrussell`이외에 `pure`, `agnoster`등이 인기가 많습니다.
+
+### Update
+zsh를 최신버전으로 업그레이드 하기 위한 명령어 입니다. brew를 이용하여 최신 버전을 유지하게 합니다.
+
+```Shell
+$ brew upgrade zsh
+```
+
+zsh의 플러그인 관리 프로그램인 oh-my-zsh은 자체적인 명령어를 가지고 있습니다. 쉘에서 다음 명령어를 입력하면 변경사항과 함께 플러그인들이 자동적으로 업데이트 됩니다.
+
+```Shell
+$ upgrade oh-my-zsh
+```
+
+## Reference
+* [본격 macOS에 개발 환경 구축하기](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)
+* [Z-Shell official guide](http://zsh.sourceforge.net/Guide/zshguide.html)
+* [터미널 초보의 필수품인 Oh My ZSH!를 사용하자](https://nolboo.kim/blog/2015/08/21/oh-my-zsh/)
