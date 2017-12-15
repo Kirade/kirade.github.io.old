@@ -1,0 +1,34 @@
+---
+layout: "post"
+title: "2017-12-15 TIL"
+date: "2017-12-15 11:45"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* Django
+  - 조회수
+  : detail view 클릭 단위로 구현, session 단위는 이후 공부필요
+  - 상품 구매 메뉴 제작
+  : 부트스트랩의 그리드시스템을 활용하여 한줄에 3개의 상품을 보일 수 있도록 제작
+  - 상품 게시, 디테일 틀 제작
+  : 상품 상세 내용, 상품 소개에 들어갈 내용 구상 필요
+
+* Blog
+  - zsh 개발환경 만들기 포스팅
+
+* 독서
+  - 사고싶었던 체인지 그라운드 - 일취월장, 완벽한 공부법 아침에 구입, 당일에 오후 배송완료
+
+### To-Do
+* Django
+  - 인덱스 페이지, 농장 소개 내용 구상
+* Blog
+  - django Admin 페이지 소개
+  - iterm 소개
+
+### Reference
+* * [Django docs](https://docs.djangoproject.com/en/2.0)
