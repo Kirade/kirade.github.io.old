@@ -1,0 +1,118 @@
+---
+layout: "post"
+title: "[감귤이야기] Django 프로젝트 세팅"
+date: "2017-12-15 19:59"
+category: Django
+tags: Web Django 감귤이야기
+---
+
+## Background
+[이전 포스팅](https://kirade.github.io/django/2017/12/12/감귤이야기-django-프로젝트-생성/)에서 프로젝트 개발을 시작하기 위해 장고를 설치하고 로컬 서버를 실행하는것 까지 소개하였습니다. 이번 포스팅에서는 앞으로 프로젝트를 진행하기 위한 기본적인 세팅방법을 소개하겠습니다. 주로 다루게될 중심 주제는 다음과 같습니다.
+
+* `git`
+* `settings.py`
+
+### 프로젝트 환경 설정
+사용하는 IDE에 따라 다를수 있는데, 가상환경으로 만든 파이썬 버전을 적용하기 위해 프로젝트의 인터프리터 설정을 만들었던 가상환경의 파이썬환경으로 적용하는 작업이 필요합니다.
+
+> macOS의 경우 pyenv로 설치된 가상환경의 경로는 ~/.pyenv/versions 안에 있습니다. 여기서 만들었던 가상환경을 찾아 파이썬 버전 경로를 지정할 수 있습니다.
+
+#### `settings.py`
+제가 프로젝트를 시작하면서 가장 먼저 주의 깊게 살펴본 것은 `settings.py`안에 있는 내용이었습니다. 이 파일 안에 들어있는 내용은 개발 전반에 걸쳐 작용하는 다양한 옵션들을 활용할수 있는 메뉴들이기 때문에 잘 알아두면 좋을것입니다. 중요한 부분들을 소개합니다.
+
+* `SECRET_KEY`
+
+>When you create a new Django project using startproject, the `settings.py` file is generated automatically and gets a random SECRET_KEY value. This value is the key to securing signed data – it is vital you keep this secure, or attackers could use it to generate their own signed values.
+
+장고는 프로젝트 생성시 자동으로 SECRET_KEY를 만들어 냅니다. 이 키는 [Cryptographic signing](https://docs.djangoproject.com/en/2.0/ref/settings/#secret-key)이라는 보안 요소의 일환으로 사용되어지므로, 공격자에게 유출되지 않아야 합니다. 이 키를 파일에 안전하게 보관하는 방법은 다양하게 있습니다. 그 중 시스템 환경변수에 키를 저장하여, 서버가 실행시 환경변수에서 불러와 적용하는 방식을 소개하겠습니다.
+
+```Shell
+# 자신의 쉘 런컴(rc)파일을 연다. bash는 ~/.bash_profile
+$ vi ~/.zshrc
+
+# 파일 안에 다음과 같이 입력한뒤, 저장한다.
+export SECRET_KEY='비밀 키'
+
+# 다음 명령어로 잘 작동하는지 확인 가능하다.
+$ echo $SECRET_KEY
+```
+
+위 파일의 작성이 완료되면, `setting.py`로 돌아가 기존의 비밀키 부분을 지우고, 환경변수를 참조하도록 수정한다.
+
+```python3
+# settings.py
+import os
+...
+SECRET_KEY = os.environ["SECRET_KEY"]
+```
+
+* `DEBUG`
+해당 값이 `true`이면 작동 오류가 났을때 화면에 디버깅 내용을 표시한다. Production 단계에서는 반드시 `false`를 적용해야 보안상의 예방할 수 있다.
+
+* `INSTALLED_APPS`
+뜻 그대로, 설치된 앱들이다. 장고 프레임워크는 기본 프레임워크 이외에 미리 만들어두어 다양한 기능들을 수행하는 앱들을 기본적으로 제공한다. 여기에 자신이 만든 앱의 이름을 넣어주면 서버에 앱이 등록된다.
+
+```python3
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'test_app',
+]
+```
+
+* `DATABASE`
+웹 서버를 작동하는데 필수적인 요소 중 하나인, 데이터베이스를 설정하는 부분인다. 기본적으로 제공되는 것은 따로 원격 데이터베이스 구동이 필요업는 sqlite를 장고에서 설정해 두었다. 만약 MySQL과 같은 다른 종류의 데이터베이스 사용을 원한다면, 각 데이터베이스에 맞는 설정이 필요하다.
+
+  다음은 데이터베이스 설정 예시이다. 앞서 `SECRET_KEY`설정과 비슷하게 비밀번호와 같은 보안과 직결된 문제가 되는 정보들은 숨겨야 한다. 앞서 환경변수를 사용하여 키를 보관했다면, 데이터베이스에서는 따로 파일에 저장하는 패턴을 적용해 보았다.
+
+```python3
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': os.path.join(BASE_DIR, 'database.cnf'),
+        }
+    }
+}
+```
+
+`database.cnf`를 프로젝트 폴더안에 만들고 다음과 같은 내용을 작성하면 된다.
+```
+[client]
+database = 데이터베이스 이름
+user = 유저 이름
+password = 데이터베이스 비밀번호
+default-character-set = utf8
+```
+
+* `LANGUAGE_CODE`
+언어 코드이다. 한국은 `ko-KP`로 설정하면 된다.
+
+* `TIME_ZONE`
+한국의 시간대인 `Asia/Seoul`로 설정한다.
+
+### `git`
+분산 버전관리 툴인 `git`을 설정하기 위해 프로젝트 디렉토리에서 `$ git init`명령어를 실행하여 프로젝트 디렉토리를 로컬 저장소 역할을 하도록 만든다. 주의해야 할 점중 하나는 깃에 커밋을 하기 이전에 적절한 .gitignore 파일을 만들어 형상관리를 하는데 필요한 파일만 관리해야한다.
+
+운영체제에 따라, 사용하는 IDE에 따라서 장고 프로젝트 디렉토리 안에 다양한 종류의 파일들이 생성되는데 이를 모두 버전관리를 할 필요는 없다. 필자는 https://www.gitignore.io/ 에서 IDE혹은 OS의 이름들을 입력하 적절한 .gitignore파일을 만들었다.
+
+**이 포스팅을 보고 데이터베이스 cnf파일을 만들었다면 해당파일도 버전관리에서 제외해야한다.**
+```
+# .gitignore파일
+...
+database.cnf
+```
+
+.gitignore을 파일을 추가하였다면 커밋을 진행합니다.
+
+```Shell
+$ git add *
+$ git commit -m "initial commit"
+```
+
+## Reference
+* [Django Docs - Settings.py](https://docs.djangoproject.com/en/2.0/ref/settings/)
