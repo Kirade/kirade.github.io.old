@@ -1,0 +1,87 @@
+---
+layout: "post"
+title: "[Java] 자바 알고리즘 입출력"
+date: "2017-12-19 23:06"
+category: Algorithm
+tags: Java Algorithm
+---
+
+## Background
+공부하고 있는 웹분야는 물론, 전 세계적으로 Java라는 언어는 다양한 분야에서 관심을 받고있는 언어이다. 이전까지 알고리즘을 공부하는 동안에는 C++ 14를 사용하여 진행했었는데, Java와 좀 더 친해지고 익숙해지면 공부한는데 이점이 많을것 같아 이 언어로 알고리즘을 공부해 보려고 한다.
+
+## Study
+
+### 기본 입출력
+
+* Scanner를 통한 입출력
+```java
+import java.util.Scanner;
+
+class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int a;
+    String b;
+
+    a = sc.nextInt();
+    sc.nextLine();;
+    b = sc.nextLine();
+
+    System.out.println(a);
+    System.out.print(b);
+  }
+}
+```
+기본 입출력에서 주의해야 할 점은, `nextInt`와 `nextLine`으로 연속으로 입력받을 때 `nextInt`는 이후 따라오는 `\n`을 입력받지 않는다. 따라서 다음과 같은 입력에서 두 메서드 중간에 `nextLine`이 없다면 정확이 입력받지 못한다.
+
+```shell
+5
+Hi
+```
+
+* BufferedReader를 통한 입출력
+
+Buffered Reader는 일반적으로 Scanner보다 빠르다.
+
+다음은 4개의 수가 띄어쓰기로 구분되어 주어졌을 때, 네 수를 1,2번째 수를 붙이고, 3,4번째 수를 붙인 두 수의 합을 구하는 예시이다.
+
+```Java
+import java.io.*;
+
+public class Main{
+  public static void main(String args[]) throws IOException{
+    BufferedReader bf = new BufferedReader(new InputStreaReader(System.in));
+    String[] line = bf.readLine().split(" ");
+    string a = line[0] + line[1];
+    string b = line[2] + line[3];
+    long ans = Long.valueOf(a) + Long.valueOf(b);
+    System.out.println(ans);
+  }
+}
+```
+
+StringTokenizer 클래스를 이용하면 구분자를 통해 스트링을 나누는데 간편한 방법을 제공한다.
+```Java
+# 예시 (구분자 ",")
+~~
+String line = bf.readLine();
+StringTokenizer st = new StringTokenizer(line, ",");
+~~
+```
+
+* StringBuilder
+지속적으로 출력하는 것이 아니라 출력들을 모아서 한번에 출력할 때 굉장히 빠르다.
+
+```Java
+# 예시 - 각 줄에 0부터 9까지 출력
+~~
+StringBuilder sb = new StringBuilder();
+for(int i=0; i<10; i++){
+  sb.append(i+"\n");
+}
+System.out.print(sb);
+~~
+```
+
+## Summary
+일반적으로 많이 사용하는 Scanner를 이용해서 받는것도 좋지만, 속도는 BufferedReader로 읽는 것이 빠르고, 문제에 따라 String을 다룰 떄에는 StringTokenizer 혹은 StringBuilder를 사용하면 편리하다. 주의해야 할 점은 String을 다룰 때 잊지 말고 자료형을 적절하게 변환해 주어야 한다.
