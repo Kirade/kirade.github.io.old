@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2017-12-20 TIL"
+date: "2017-12-20 21:53"
+tag: TIL
+category: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Django
+  - Footer하단 고정
+  - 상품 상세 페이지, div 나누고 버튼 제작
+
+* 알고리즘
+  - Java Collections 정리
+    - ArrayList, Set, Stack, Queue, Map
+
+### To-Do
+* Django
+  - 제품 상세 페이지 로직
+
+* 알고리즘
+- 연습문제 풀이 : 코딩인터뷰 전격분석
+
+### Reference
+* [Footer하단 고정](http://nuli.navercorp.com/sharing/blog/post/634)
+* [Django 읽어볼만한 블로그](https://simpleisbetterthancomplex.com/tag/django/)
