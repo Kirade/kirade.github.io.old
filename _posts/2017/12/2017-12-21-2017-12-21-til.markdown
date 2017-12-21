@@ -1,0 +1,26 @@
+---
+layout: "post"
+title: "2017-12-21 TIL"
+date: "2017-12-21 23:26"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* 알고리즘
+  - Java 정렬
+    - Comparable, Comparator 학습 및 연습문제 풀이
+
+
+### To-Do
+* Django
+  - 제품 상세 페이지 로직
+
+* 알고리즘
+  - 연습문제 풀이 : 코딩인터뷰 전격분석
+
+### Reference
+* [백준 온라인강의](https://code.plus/lecture/9)
+* [브런치 - 강관우님](https://brunch.co.kr/@kd4/7)

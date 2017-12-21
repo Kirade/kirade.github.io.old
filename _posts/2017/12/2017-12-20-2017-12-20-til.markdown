@@ -23,7 +23,7 @@ category: TIL
   - 제품 상세 페이지 로직
 
 * 알고리즘
-- 연습문제 풀이 : 코딩인터뷰 전격분석
+  - 연습문제 풀이 : 코딩인터뷰 전격분석
 
 ### Reference
 * [Footer하단 고정](http://nuli.navercorp.com/sharing/blog/post/634)
