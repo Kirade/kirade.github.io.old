@@ -14,7 +14,7 @@ tags: Java Algorithm
 # 1. Sort  
 자바에서 배열의 정렬은 `Arrays.sort` 콜렉션은 `Collections.sort`를 사용합니다.  
 
-    일반적인 sort 알고리즘들은 숫자를 오름차순으로 정렬하는것을 기본으로 하고있습니다. 정렬하는것이 까다로워 지는 이유는 오름차순이 아닌 내림차순으로 정렬하거나, int, double, string과 같은 기본 자료형이 아니라 클래스와 같은 것들을 정렬하는 것이 어렵기 때문입니다.
+  일반적인 sort 알고리즘들은 숫자를 오름차순으로 정렬하는것을 기본으로 하고있습니다. 정렬하는것이 까다로워 지는 이유는 오름차순이 아닌 내림차순으로 정렬하거나, int, double, string과 같은 기본 자료형이 아니라 클래스와 같은 것들을 정렬하는 것이 어렵기 때문입니다.
 
 # 2. Comparable
 compareTo 메서드를 작성하여 클래스 내부에 선언을 해야합니다.
@@ -58,7 +58,6 @@ Comparable과 Comparator 두 가지 방법의 정렬이 있는 이유는 Compara
 > "CaDAbcBd"와 같은 문자열을 "aAbBcCdD"와 같은 알파벳 순서로 정렬하는 코드를 작성하세요.
 
 [풀이 소스 - gist](https://gist.github.com/Kirade/e8bc5dadf69fe412f0b026f4dc33b6af)
-
 ## Reference
 * [백준 온라인강의](https://code.plus/lecture/9)
 * [브런치 - 강관우님](https://brunch.co.kr/@kd4/7)
