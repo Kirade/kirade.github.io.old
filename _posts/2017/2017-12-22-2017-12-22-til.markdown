@@ -1,0 +1,26 @@
+---
+layout: "post"
+title: "2017-12-22 TIL"
+date: "2017-12-22 21:59"
+tag: TIL
+category: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* 알고리즘
+  - Java Algorithm
+    - BigDecimal, BigInteger 공부
+
+* Blog
+  - 알고리즘 공부 내용 정리 포스트
+
+### To-Do
+* Django
+  - 상품 상세 페이지 제작
+    - 제품 구매, 배송지 설정, 구매 절차 등
+
+
+### Reference
