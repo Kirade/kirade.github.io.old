@@ -15,6 +15,8 @@ tags: macOS zsh
 
 가장 먼저 소개드릴 프로그램은 zsh입니다.
 
+---
+
 ## Study
 
 ### Origin
@@ -88,6 +90,8 @@ zsh의 플러그인 관리 프로그램인 oh-my-zsh은 자체적인 명령어�
 ```Shell
 $ upgrade oh-my-zsh
 ```
+
+---
 
 ## Reference
 * [본격 macOS에 개발 환경 구축하기](https://subicura.com/2017/11/22/mac-os-development-environment-setup.html)

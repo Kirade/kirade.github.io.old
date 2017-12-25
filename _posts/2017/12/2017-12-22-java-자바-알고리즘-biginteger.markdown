@@ -9,6 +9,7 @@ category: Algorithm
 ## Background
 일반적으로 Java에서 사용되는 기본 자료형으로는 그 자료형의 크기의 한계로 인해 더 큰 수를 표현하지 못하는 경우가 있습니다. 그런 경우 Java에서는 BigInteger와 같은 자료형으로 더 큰 수를 표현합니다.
 
+---
 ## Study
 기본자료형은 각각
 `Int -> -2^31 ~ 2^31-1`
@@ -47,6 +48,6 @@ BigInteger에 사용자 인풋으로 입력하기 위해서는, Scanner클래스
 ### BigDecimal
 정수가 아닌 실수를 처리하기 위한 클래스로 정의되어 있다.
 
-
+---
 ## Reference
 [백준 온라인강의](https://code.plus/lecture/10)

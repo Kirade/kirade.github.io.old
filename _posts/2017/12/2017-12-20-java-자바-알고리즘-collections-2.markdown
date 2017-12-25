@@ -9,6 +9,7 @@ tags: Java Algorithm
 ## Background
 앞서 살펴 본 ArrayList, LinkedList에 이어 Collection들을 알아보겠습니다.
 
+---
 ## Study
 
 # 1. Stack

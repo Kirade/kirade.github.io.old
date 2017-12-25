@@ -1,0 +1,22 @@
+---
+layout: "post"
+title: "2017-12-25 TIL"
+date: "2017-12-25 23:34"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* Blog
+  - 감귤이야기 model, admin사이트 생성 포스트
+
+### To-Do
+* Django
+  - 상품 구매 절차 생성
+- Blog
+  - 감귤이야기 뷰와 템플릿
+
+### Reference
+* [장고 공식문서](https://docs.djangoproject.com/en/2.0/)

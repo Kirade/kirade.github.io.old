@@ -9,6 +9,7 @@ tags: macOS tmux
 ## Background
 개발을 진행할 때에 터미널을 사용하다보면, 여러 터미널 창을 키고 필요할 때마다 각 창을 활성화 시켜서 작업을 진행하곤 했었습니다. `tmux`는 그런 불편함을 줄이기 위해 저의 개발환경에 적용한 유용한 도구입니다.
 
+---
 ## Study
 >tmux is a "terminal multiplexer", it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen.
 
@@ -67,7 +68,7 @@ control + b, %
 이 이외에도 tmux에는 굉장히 많은 명령어가 있습니다.
 * [tmux document](http://man.openbsd.org/OpenBSD-current/man1/tmux.1)
 * [tmux 관련 블로그](http://www.haruair.com/blog/2124)
-
+---
 ## Reference
 * [tmux - github](https://github.com/tmux/tmux/wiki)
 * [libevent](http://libevent.org/)

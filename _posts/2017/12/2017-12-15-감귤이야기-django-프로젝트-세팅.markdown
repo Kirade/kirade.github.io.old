@@ -11,7 +11,7 @@ tags: Web Django 감귤이야기
 
 * `git`
 * `settings.py`
-
+---
 ### 프로젝트 환경 설정
 사용하는 IDE에 따라 다를수 있는데, 가상환경으로 만든 파이썬 버전을 적용하기 위해 프로젝트의 인터프리터 설정을 만들었던 가상환경의 파이썬환경으로 적용하는 작업이 필요합니다.
 
@@ -94,7 +94,7 @@ default-character-set = utf8
 
 * `TIME_ZONE`
 한국의 시간대인 `Asia/Seoul`로 설정한다.
-
+---
 ### `git`
 분산 버전관리 툴인 `git`을 설정하기 위해 프로젝트 디렉토리에서 `$ git init`명령어를 실행하여 프로젝트 디렉토리를 로컬 저장소 역할을 하도록 만든다. 주의해야 할 점중 하나는 깃에 커밋을 하기 이전에 적절한 .gitignore 파일을 만들어 형상관리를 하는데 필요한 파일만 관리해야한다.
 
@@ -113,6 +113,6 @@ database.cnf
 $ git add *
 $ git commit -m "initial commit"
 ```
-
+---
 ## Reference
 * [Django Docs - Settings.py](https://docs.djangoproject.com/en/2.0/ref/settings/)

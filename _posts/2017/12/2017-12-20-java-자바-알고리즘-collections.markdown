@@ -9,6 +9,7 @@ tags: Java Algorithm
 ## Background
 C++을 이용해서 알고리즘을 공부할 때에는 STL에 구현되어 있는 Stack, Queue, List, Deque, Set, Map 등과 같은 자료구조들을 활용하였습니다. 비슷하게 자바에는 Collection를 사용하면 C++의 STL과 같은 기능을 하는 자료구조들을 간편하게 사용할 수 있습니다.
 
+---
 ## Study
 
 # 1. ArrayList  
