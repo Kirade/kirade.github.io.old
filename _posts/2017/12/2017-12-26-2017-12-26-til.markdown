@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2017-12-26 TIL"
+date: "2017-12-26 23:47"
+category: TIL
+tag: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+* Blog
+  - 장고 뷰와 템플릿 포스팅
+
+### To-Do
+* Django
+  - 구매 프로세스 제작
+* Blog
+  - Python 혹은 MySQL 주제 찾기
+
+### Reference
+* [장고 튜토리얼](https://docs.djangoproject.com/en/2.0/intro/tutorial03/)
