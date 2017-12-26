@@ -56,12 +56,10 @@ def boardView(request):
 
 ## Template
 다음과 같이 정의하면 뷰에서 랜더링한 내용을 활용하여 템플릿에 넣을 수 있습니다.
+`{{ intro }}`와 같은 형식으로 html 템플릿 파일안에 넣을 수 있습니다.
 
 ```html
 # `app_name`/board.html
-
-<p>{{ intro }}</p>
-
 ```
 
 ---
