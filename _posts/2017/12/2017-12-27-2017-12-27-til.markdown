@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2017-12-27 TIL"
+date: "2017-12-27 23:08"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+* 자바스크립트
+  - 복습을 위해서 '칸아카데미' JS 강의 시도하였으나 난이도가 너무 낮은거 같아 '프로그래머스'의 자바스크립트 입문강의 완주
+
+* Blog
+  - 자바스크립트 필기내용 포스팅
+
+### To-Do
+* 자바스크립트와 프론트앤드 강의 완주
+* 좋은 강의 찾기 (Python, Java, 알고리즘, 웹)
+
+### Reference
+* [프로그래머스 - 자바스크립트와 웹 프론트엔드](https://programmers.co.kr/learn/courses/10)
