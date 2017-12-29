@@ -9,6 +9,8 @@ tags: Anaconda Python
 ## Background
 무료로 수강가능 한 머신러닝 기초 강의를 좋은기회에 온라인으로 수강하게 되었습니다. 처음 강의는 개발 환경 설정을 위한 `Anaconda`를 설치하는 내용이었습니다. 강의 내용그대로 설치가 정확하게 일치하게 진행되지 않아 이곳 저곳 찾아보면서 설치를 완료했습니다. 강의 내용대로 공식 홈페이지에서 설치하는 방법이 아닌 `pyenv`패키지를 이용하여 설치하는 과정을 소개합니다.
 
+---
+
 ## Study
 >With over 4.5 million users, the open source Anaconda Distribution is the easiest way to do Python data science and machine learning. It includes the conda package and virtual environment manager which ensures you can quickly and easily install and run complex data science and machine learning environments like Scikit-Learn and Tensorflow with just one "conda install" command.
 
@@ -49,6 +51,8 @@ $ pyenv versions
 $ pyenv shell anaconda3-5.0.0
 $ pip list
 ```
+
+---
 
 ## Reference
 * [아나콘다 공식 페이지](https://www.anaconda.com/what-is-anaconda/)
