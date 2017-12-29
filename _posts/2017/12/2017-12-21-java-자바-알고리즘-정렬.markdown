@@ -21,7 +21,7 @@ tags: Java Algorithm
 compareTo 메서드를 작성하여 클래스 내부에 선언을 해야합니다.
 다음은 Point (x,y)를 가지고 있는 클래스를 x는 큰 순서대로, 같다면 y가 큰 순서대로 정렬하는 메서드입니다.
 
-```Java
+```java
 public int compareTo(Point that){
   if(this.x < that.x){
     return -1;
@@ -42,7 +42,7 @@ public int compareTo(Point that){
 # 3. Comparator
 Comparator를 사용하는 경우의 `sort`메서드 두번째 인자에 어떻게 정렬할 것인지 Comparator를 정의하면 됩니다.
 
-```Java
+```java
 Arrays.sort(a, new Comparator<Point>(){
   public int compare(Point p1, Point p2){
     return p1.compareTo(p2);
@@ -58,8 +58,10 @@ Comparable과 Comparator 두 가지 방법의 정렬이 있는 이유는 Compara
 ---
 ## 연습문제
 > "CaDAbcBd"와 같은 문자열을 "aAbBcCdD"와 같은 알파벳 순서로 정렬하는 코드를 작성하세요.
----
+>
 [풀이 소스 - gist](https://gist.github.com/Kirade/e8bc5dadf69fe412f0b026f4dc33b6af)
+
+---
 ## Reference
 * [백준 온라인강의](https://code.plus/lecture/9)
 * [브런치 - 강관우님](https://brunch.co.kr/@kd4/7)

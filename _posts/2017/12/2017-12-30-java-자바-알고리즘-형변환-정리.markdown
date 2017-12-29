@@ -80,6 +80,8 @@ Character ascii = (char)num;
 Integer num = (int)ascii;
 ```
 
+---
+
 ## Summary
 크게 3가지 메소드로 나눌 수 있을것 같습니다.
 1. `valueOf()`

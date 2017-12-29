@@ -41,9 +41,9 @@ ArrayList는 배열이기 때문에 중간에 원소를 추가하거나 삭제, 
 ### 인접리스트
 ArrayList는 그래프를 활용하는 알고리즘에서 많이 사용된다. 다음과 같이 초기화하고 리스트의 내용을 추가할 수있다.
 
-```Java
+```java
 ArrayList<Integer>[] a = (ArrayList<Integer>[]) new ArrayList[n+1];
-for(int i=1; i<n; i++){
+for(int i=1; i<=n; i++){
   a[i] = new ArrayList<Integer>();
 }
 for(int i=0; i<m; i++){

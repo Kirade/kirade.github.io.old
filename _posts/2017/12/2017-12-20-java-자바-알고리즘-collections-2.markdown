@@ -22,6 +22,11 @@ tags: Java Algorithm
 * `bool empty()`
 * `int size()`
 
+### 구현
+```java
+Stack newStack = new Stack();
+```
+
 # 2. Set
 Set은 중복된 원소를 포함하지 않습니다. Java에서는 인터페이스로 구현한 것들로는 HashSet, TreeSet, LinkedHashSet 있습니다.
 
@@ -50,6 +55,13 @@ C++ 에서는 add, celar, contains의 시간 복잡도는 O(logN)이 었지만, 
 순서가 중요한 경우에는 TreeSet
 입력으로 넣은 순서가 중요한 경우에는 LinkedHashSet을 사용한다.
 
+### 구현
+```java
+Set hash_set = new HashSet();
+Set tree_set = new TreeSet();
+Set linkedhash_set = new LinkedHashSet();
+```
+
 # 3. Map
 Key - Value 쌍을 이루는 사전과 비슷한 자료구조 입니다. Map도 앞서 이야기한 Set과 같이 인터페이스이고, 구현으로는 HashMap, TreeMap, LinkedHashMap이 있습니다.
 
@@ -65,7 +77,7 @@ Key - Value 쌍을 이루는 사전과 비슷한 자료구조 입니다. Map도 
 * `boolean remove(Object o)`
 * `int size()`
 
-```Java
+```java
 # 맵을 순회하는 방법
 
 for(Map.Entry<String, Integer> entry : var_map.entrySet()){
@@ -74,6 +86,14 @@ for(Map.Entry<String, Integer> entry : var_map.entrySet()){
   /* logic */
 }
 ```
+
+### 구현
+```java
+Map<k, v> hash_map = new HashMap<>();
+Map<k, v> tree_map = new TreeMap<>();
+Map<k, v> linkedhash_map = new LinkedHashMap<>();
+```
+
 
 # 4. Queue
 한쪽 끝에서만 자료를 넣고 다른쪽 끝에서만 뺄 수 있는 자료구조 입니다. First In First Out라고도 합니다.(FIFO)
@@ -87,7 +107,14 @@ for(Map.Entry<String, Integer> entry : var_map.entrySet()){
 * `boolean isEmpty()`
 * `int size()`
 
+### 구현
+```java
+Queue dequeQueue = new ArrayDeque();
+Queue linkedlistQueue = new LinkedList();
+Queue priorityQueue = new PriorityQueue();
+```
+
 # 5. PriorityQueue
 Queue의 구현중 하나인 PriorityQueue는 최대 힙 혹은 최소 힙으로 구현하는 경우가 많다.
 
-기본적으로 최소값을 높은 우선순위를 주기 때문에 최소 힙은 그대로 구현할 수 있지만, 최대 힙의 경우는 comparator을 만들어 어떻게 compare할 지 결졍해야한다.
+기본적으로 최소값을 높은 우선순위를 주기 때문에 최소 힙은 그대로 구현할 수 있지만, 최대 힙의 경우는 comparator을 만들어 어떻게 compare 할지 결정해야한다.
