@@ -1,0 +1,28 @@
+---
+layout: "post"
+title: "2017-12-31 TIL"
+date: "2017-12-31 23:29"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* 알고리즘
+  - 코딩인터뷰 문자열 연습문제 풀이 마무리
+    - 9 문제
+
+* Blog
+  - 2017년 결산 포스팅
+
+* 독서
+  - 일취월장
+
+### To-Do
+
+* 코딩 테스트 준비 ( ~ 1/2)
+
+### Reference
+* [github - 알고리즘](https://github.com/Kirade/Algorithms)
