@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2018-01-01 TIL"
+date: "2018-01-01 11:57"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* Web scraping
+  - ch1 ~ ch4 읽으며 예시코드로 위키피디아, 네이버를 기준으로 스크래핑 하도록 예시 제작
+  - scrpy, api 를 이용한 웹 스크래핑
+
+* Blog
+  - TIL 길이가 길어지는 것을 대비하여 더보기 기능 추가
+    - jQuery
+
+* 알고리즘
+  - 코딩인터뷰 완전분석 2장 링크드리스트 연습문제 풀이
+
+### To-Do
+
+* 1/2일 코딩테스트 준비
+
+###Reference
+
+* [scrapy - tutorial ](https://doc.scrapy.org/en/latest/intro/tutorial.html)
