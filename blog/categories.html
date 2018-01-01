@@ -26,3 +26,45 @@ title: Categories
     {% endfor %}
   </div>
 </div>
+
+<!-- TIL 접기위한 자바스크립트 -->
+<script type="text/javascript">
+
+var til = $('#til');
+var ul_tag = $(til).next();
+var recent = document.createElement('ul');
+var li_tag = document.createElement('li');
+var a_btn = document.createElement('a');
+var more = document.createTextNode('더보기..');
+
+
+$(ul_tag).css('display','none');
+
+$(document).ready(function(){
+  recent.setAttribute('class','tags-expo-posts');
+
+  for(var i=0; i<5; i++){
+      $(ul_tag).children().eq(i).clone().appendTo(recent);
+  }
+  $(more).appendTo(li_tag);
+  $(li_tag).appendTo(a_btn);
+  $(a_btn).appendTo(recent);
+
+  $('#til').after(recent);
+});
+
+$(document).ready(function(){
+    $(a_btn).click(function(){
+        var submenu = $(this).parent().next("ul");
+
+        if( submenu.is(":visible") ){
+            submenu.slideUp();
+
+        }else{
+            submenu.slideDown();
+            $(this).parent().slideUp();
+        }
+    });
+});
+
+</script>
