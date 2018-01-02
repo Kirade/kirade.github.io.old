@@ -1,0 +1,32 @@
+---
+layout: "post"
+title: "2018-01-02 TIL"
+date: "2018-01-02 21:32"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* 프로그래머스 강의
+  - 자바스크립트 강의 수강 끝
+  - 정규표현식 강의 수강 끝
+
+* 생활코딩
+- jQuery 강의 수강( ~ 레퍼 )
+
+* 알고리즘
+- 코딩 테스트 진행 (zum_internet)
+
+### To-Do
+
+* 장고 프로젝트 진행 복귀 ( 구매 프로세스 기획 )
+* 알고리즘 문제풀이 ( 링크드리스트 연습문제 하던거부터 )
+* 웹 스크래핑 pdf - ch5
+
+### Reference
+
+* [프로그래머스 - 강의 목록](programmers.co.kr/learn)
+* [생활코딩 - jQuery,래퍼](https://opentutorials.org/course/53/50)
