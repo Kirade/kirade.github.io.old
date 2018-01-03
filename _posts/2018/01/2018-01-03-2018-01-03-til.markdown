@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2018-01-03 TIL"
+date: "2018-01-03 23:48"
+---
+
+# 생활코딩
+
+
+## Today I Learned
+
+### What I Did
+
+- 생활코딩
+  - jQuery 강의 수강완료
+
+- 웹 스크래핑 pdf
+  - Ch5 읽고 연습문제 작성 테스트
+
+- Blog
+  - 자바스크립트 , jQuery 필기 포스팅
+
+### To-Do
+
+* 장고 프로젝트 진행 복귀 ( 구매 프로세스 기획 )
+* 알고리즘 문제풀이 ( 링크드리스트 연습문제 하던거부터 )
+* 웹 스크래핑 pdf - ch6
+
+### Reference
+* [생활코딩 - jQuery](https://opentutorials.org/course/53/50)
