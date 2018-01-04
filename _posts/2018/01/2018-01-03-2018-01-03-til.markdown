@@ -2,6 +2,8 @@
 layout: "post"
 title: "2018-01-03 TIL"
 date: "2018-01-03 23:48"
+category: TIL
+tag: TIL
 ---
 
 # 생활코딩
