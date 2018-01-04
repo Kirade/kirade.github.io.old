@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-01-04 TIL"
+date: "2018-01-04 22:54"
+category: TIL
+tag: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+
+* Udemy
+  - 새해 기념 할인 행사를 진행해서, 베스트셀러 강의들 장바구니에 담아두었다.
+    - 파이썬, 파이썬+장고, 장고 인터넷 쇼핑몰 만들기, 자바 마스터코스
+
+### To-Do
+
+* 장고 프로젝트 진행 복귀 ( 구매 프로세스 기획 )
+* 알고리즘 문제풀이 ( 링크드리스트 연습문제 하던거부터 )
+* 웹 스크래핑 pdf - ch6
+
+
+### Reference
+
+* [Udemy - OnlineCourse](https://www.udemy.com/)
