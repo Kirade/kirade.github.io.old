@@ -28,5 +28,5 @@ tag: TIL
 
 ### Reference
 
-* [프로그래머스 - 강의 목록](programmers.co.kr/learn)
+* [프로그래머스 - 강의 목록](http://programmers.co.kr/learn)
 * [생활코딩 - jQuery,래퍼](https://opentutorials.org/course/53/50)
