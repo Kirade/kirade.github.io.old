@@ -1,0 +1,25 @@
+---
+layout: "post"
+title: "2018-01-05 TIL"
+date: "2018-01-05 23:12"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* Django
+  - 모델부터 시작해서 테스트 케이스 작성 시작
+  - 테스트 커버리지 범위를 보여주는 coveralls 패키지 적용
+    - README.md에 커버리지 뱃지 추가
+
+### To-Do
+
+* 알고리즘 문제풀이 ( 링크드리스트 연습문제 하던거부터 )
+* 웹 스크래핑 pdf - ch6
+
+
+### Reference
+* [coveralls.io](https://coveralls.io/)
