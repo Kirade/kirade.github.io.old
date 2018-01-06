@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2018-01-06 TIL"
+date: "2018-01-06 11:22"
+category: TIL
+tag: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+
+* Django
+    - 테스트 케이스 작성
+
+* Blog
+  - 시맨틱 태그 추가
+
+* 코딩캠프 준비
+  - 참고 웹사이트 탐색 및 읽어보기
+
+### To-Do
+
+* 알고리즘 문제풀이 ( 링크드리스트 연습문제 하던거부터 )
+* 웹 스크래핑 pdf - ch6
+
+
+### Reference
+* [poiemaweb](http://poiemaweb.com/)
