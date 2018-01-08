@@ -6,9 +6,6 @@ category: TIL
 tag: TIL
 ---
 
-# 생활코딩
-
-
 ## Today I Learned
 
 ### What I Did
