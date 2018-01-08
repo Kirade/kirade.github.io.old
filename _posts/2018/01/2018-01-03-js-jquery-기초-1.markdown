@@ -76,7 +76,7 @@ jQuery를 사용하기 위해서는 소스 파일을 직접 다운받아 웹 서
   ```
 
 - API
-  - jQuery가 제공하는 다양한 API들은 [jQuery API document](api.jquery.com)에서 좋은 예제와 함께 설명을 볼 수있습니다.
+  - jQuery가 제공하는 다양한 API들은 [jQuery API document](http://api.jquery.com)에서 좋은 예제와 함께 설명을 볼 수있습니다.
 
 
 ---

@@ -1,0 +1,28 @@
+---
+layout: "post"
+title: "2018-01-08 TIL"
+date: "2018-01-08 11:03"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+* 제주 코딩캠프 참석
+  - 오전
+    - 강의 소개 및 학습내용 개요
+    - 개발환경 세팅 ( Atom, Chrome, etc.)
+    - 파이썬 기초(~`001.py`)
+  - 오후
+    - HTML / CSS
+    - Javascript
+
+### To-Do
+
+* 코딩캠프 1월 8일 ~ 1월 12일 오전 9시 ~ 오후 10시
+
+
+### Reference
+* [제주코딩베이스캠프](http://www.jejucodingcamp.com/)
