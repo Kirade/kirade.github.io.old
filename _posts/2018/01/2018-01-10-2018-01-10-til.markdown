@@ -1,0 +1,30 @@
+---
+layout: "post"
+title: "2018-01-10 TIL"
+date: "2018-01-10 09:10"
+category: TIL
+tag: TIL
+---
+
+
+## Today I Learned
+
+### What I Did
+
+* 제주 코딩캠프 참석
+  - 오전
+    - 유준모 개발자님
+      - 자바스크립트 Part 2
+  - 오후
+    - 김대현 개발자님
+      - Git에 관하여
+    - 이호준 대표님
+      - Bootstrap
+
+### To-Do
+
+* 코딩캠프 1월 8일 ~ 1월 12일 오전 9시 ~ 오후 10시
+
+
+### Reference
+* [제주코딩베이스캠프](http://www.jejucodingcamp.com/)

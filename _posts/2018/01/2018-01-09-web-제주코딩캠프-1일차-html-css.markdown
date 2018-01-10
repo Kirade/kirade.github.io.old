@@ -3,7 +3,7 @@ layout: "post"
 title: "[Web] 제주코딩캠프 1일차 - HTML / CSS"
 date: "2018-01-09 08:43"
 category: Web
-tags: HTML CSS Python CodingCamp Django
+tags: HTML CSS Python CodingCamp Django Javascript
 ---
 
 ## Background
