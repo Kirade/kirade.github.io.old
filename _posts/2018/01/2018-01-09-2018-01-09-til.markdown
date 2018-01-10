@@ -1,10 +1,11 @@
 ---
 layout: "post"
-title: "2018-01-10 TIL"
-date: "2018-01-10 11:14"
+title: "2018-01-09 TIL"
+date: "2018-01-09 09:10"
 category: TIL
 tag: TIL
 ---
+
 
 ## Today I Learned
 
@@ -12,10 +13,13 @@ tag: TIL
 
 * 제주 코딩캠프 참석
   - 오전
-    - 해안도로 근처의 카페에서 자유코딩
+    - 유준모 개발자님
+      - 자바스크립트 Part 2
   - 오후
+    - 김대현 개발자님
+      - Git에 관하여
     - 이호준 대표님
-      - 파이썬 문법 강의
+      - Bootstrap
 
 ### To-Do
 
