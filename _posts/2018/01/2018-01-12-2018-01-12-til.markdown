@@ -13,6 +13,8 @@ tag: TIL
 * 폭설로인한 제주코딩캠프 결석
 * Blog
   - 감귤이야기 부트스트랩 탬플릿 적용
+- Udemy
+  - Django bootcamp 강의 ( ~HTML Basics )
 
 
 ### To-Do
