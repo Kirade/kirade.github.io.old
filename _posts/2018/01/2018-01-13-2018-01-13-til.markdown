@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-13 TIL"
+date: "2018-01-13 15:37"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - Django BootCamp 강의
+    - HTML / CSS / Bootstrap 강의 마무리
+
+### To-Do
+
+* Udemy - Django BootCamp ( JS, Python )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
