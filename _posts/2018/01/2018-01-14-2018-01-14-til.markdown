@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-14 TIL"
+date: "2018-01-14 20:08"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Django
+  - 모달 폼을 활용해서 주문 신청서 작성폼 만들기
+    - 데이터베이스 Order 모델 추가 및 뷰함수 구현
+
+### To-Do
+
+* Udemy - Django BootCamp ( JS, Python )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
