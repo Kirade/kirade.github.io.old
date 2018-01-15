@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-15 TIL"
+date: "2018-01-15 21:44"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - 자바스크립트강의 마무리
+  - jQuery 강의 수강
+
+### To-Do
+
+* Udemy - Django BootCamp ( Python )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
