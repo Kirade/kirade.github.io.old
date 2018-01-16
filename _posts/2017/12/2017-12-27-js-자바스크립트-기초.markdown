@@ -53,6 +53,11 @@ HTML, CSS와 더불어 JS(Javascript)는 웹 페이지를 만드는 3가지 필�
 
 - 주석은 `//` 로 한 줄을, `/* code */`로 여러줄을 주석처리합니다.
 
+- Array -> Mutable
+String -> Immutable
+
+- Object -> key는 ""없이 정의한다. 하지만 접근시에는 "key"로 접근합니다.
+
 ---
 
 ## Reference
