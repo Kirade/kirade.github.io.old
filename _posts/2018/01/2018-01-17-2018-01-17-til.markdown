@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-17 TIL"
+date: "2018-01-17 13:36"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - Django Level One ~ Five
+    - 장고 기본적인 기능 전체적으로 강의
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
