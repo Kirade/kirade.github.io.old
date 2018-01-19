@@ -1,0 +1,26 @@
+---
+layout: "post"
+title: "2018-01-19 TIL"
+date: "2018-01-19 22:48"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - Deployment
+  - Django CBV 강의 수강
+
+- Django
+  - PythonAnywhere 배포
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
