@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-20 TIL"
+date: "2018-01-20 19:08"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - Blog Clone Project 강의 수강
+  - 직접 처음부터 끝까지 제작 연습
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
