@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-01-25 TIL"
+date: "2018-01-25 22:10"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+1월 22일부터 25일까지 서울에 살 집을 구하는 겸, 잠시 여행을 다녀왔습니다.
+
+### What I Did
+
+- 이력서
+  - 이력서 작성요령 정리 및 기획 시작
+
+- Udemy
+  - Social Media Clone 프로젝트
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+* 이력서 구성 및 제작
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
