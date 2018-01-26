@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-01-26 TIL"
+date: "2018-01-26 23:02"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- 이력서
+  - Pages, Keynote 를 가지고 이력서 만드는 중
+    - 일반적인 표 형식의 이력서와 다르게 개발 타임라인, 프로젝트 별 소개, 문제 해결 사례, 자기소개, 외부활동, 연락처 등으로 구성
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+* 이력서 제작 마무리
+
+### Reference
+* [이력서 만들기 - 우아한형제들 기술블로그 ](http://woowabros.github.io/experience/2017/07/17/resume.html)
