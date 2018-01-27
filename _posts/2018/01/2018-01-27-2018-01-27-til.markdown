@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-01-27 TIL"
+date: "2018-01-27 23:01"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- 이력서 제작완료
+- Udemy
+  - Django BootCamp 소셜 클론 프로젝트 진행중
+    - ~ Part 8
+
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
+
+* [이력서 만들기 - 우아한형제들 기술블로그 ](http://woowabros.github.io/experience/2017/07/17/resume.html)
