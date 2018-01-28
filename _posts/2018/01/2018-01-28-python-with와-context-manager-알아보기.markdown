@@ -33,7 +33,7 @@ finally:
 
 각 이름에 걸맞게 `__enter__()`는 `with`구문이 시작되는 시점에 자동으로 실행되고, 반대로 `__exit__()`는 마치는 시점에 호출되게 됩니다.
 
-```Python
+```python
 class TestContextManager():
 
   def __enter__(self):
@@ -45,7 +45,7 @@ class TestContextManager():
 
 이렇게 `context manager`를 정의하게 되면 비로소, `with`구문을 사용하여 간결하게 코딩을 할 수 있습니다. 일반적으로 사용되는 파일, 데이터베이스 연결은 `context manager`로 정의되어 있어 `with`구문의 사용이 별다른 처리없이 사용가능 합니다.
 
-```Python
+```python
 ## 파일
 with open("test.txt") as f:
     data = f.read()
