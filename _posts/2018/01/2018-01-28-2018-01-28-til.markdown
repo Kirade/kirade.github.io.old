@@ -1,0 +1,25 @@
+---
+layout: "post"
+title: "2018-01-28 TIL"
+date: "2018-01-28 19:59"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Udemy
+  - Django BootCamp 수강완료
+    - 수료증 취득 및 링크드인 이력에 등록
+    - 마지막 Social Clone Project 안에 난해한 부분들이 많이 등장하여 해당 부분에 대한 이해를 위해 연구
+
+
+### To-Do
+
+* Udemy - Django BootCamp ( Django )
+
+
+### Reference
+* [Udemy - Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)
