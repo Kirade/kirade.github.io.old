@@ -1,0 +1,25 @@
+---
+layout: "post"
+title: "2018-01-29 TIL"
+date: "2018-01-29 22:53"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- AskDjango
+  - 장고 강의 수강 시작
+    - 프로젝트 세팅, URLConf, View, Regular Expression, Model, Migration, Shell
+
+
+### To-Do
+
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+
+### Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
