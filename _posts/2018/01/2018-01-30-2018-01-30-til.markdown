@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-01-30 TIL"
+date: "2018-01-30 15:10"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- AskDjango
+  - 장고 강의 - 기초편
+    - HTTP Status Code, Model Relationship Field, Template Inheritance, Template Loader
+
+- Two Scoops of django
+  - 도서 구매 및 스터디 시작
+
+
+### To-Do
+
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+### Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
