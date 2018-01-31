@@ -1,0 +1,58 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #1"
+date: "2018-02-01 07:42"
+category: Django
+tags: Django AskDjango
+---
+
+## Background
+장고를 꾸준히 배워나가고 있습니다. 처음 시작은 장고 공식문서의 튜토리얼을 따라가면서 진행하였고, 이를 토대로 토이프로젝트를 진행하여 웹 서비스를 제작하였습니다.
+
+하지만 진행하면서 많은 의문이 있었습니다. 제작하면서 사용한 여러 기술들이 적절하게 사용되었는지 부터 시작하여 많은 의문들을 일일이 검색하고 공식문서에 찾는것에 지쳐가고 있었습니다.
+
+그러던 중, 장고 강의 몇가지를 알게 되었고 먼저 Udemy의 [Django BootCamp](https://www.udemy.com/python-and-django-full-stack-web-developer-bootcamp/)를 듣게 되었고, 이에 이어서 이진석 개발자님이 진행하는 'AskDjango' VOD를 구독하여 배울 기회가 생겼습니다.
+
+기존에 어느정도 공부를 해보고 강의를 듣게되니 여러가지 답답했던 부분들이 많이 풀려가는것을 느끼고 있습니다. 그 내용들을 포스팅의 형태로 정리해보고자 합니다.
+
+
+---
+## Study
+
+### Overview
+
+* 장고는 풀스텍 웹 프레임워크이다.
+* 장고는 유저의 요청을 받아서, `URLConf`에서 URL을 파싱하고, 일치하는 패턴이 인자로 가지고 있는 뷰 함수를 사용한다.
+* 뷰 함수는 `request`를 받고 `HttpResponse`를 반환한다. 필요하다면 데이베이스에 쿼리한다.
+* 장고는 데이터베이스 처리를 ORM을 통해 쿼리하기 떄문에 모델을 정의하면 간편하게 이용할 수 있다.
+* 직접 `HttpResponse` 안에 하드코딩을 하여 표현할 수 있지만, 이를 간편하게 하기 위해 템플릿을 사용한다.
+* 장고는 로컬 개발서버를 제공한다.
+  - `python manage.py runserver`
+
+
+### App, URLConf, Template
+
+* 장고는 One Project, Multi App 구조를 가진다.
+  - App 하나로 구성할 수 있지만, 기능 단위로 분리하여 제작하면 앱을 재사용할 수 있으므로 효율적이다.
+* 앱을 생성하면, `INSTALLED_APPS`에 등록하고, 만들어진 앱 내에 필요한 디렉토리, 파일 (`templates`, `urls.py`)들을 만든다. 그리고 프로젝트 `urls.py`에 해당 앱의 경로를 `include`한다.
+* 장고가 `template` 경로를 찾는 방식은 서버를 실행 할 때, 설정된 `Template Loader`를 통해 경로 목록을 저장한 뒤 계속 사용한다. 따라서 프로젝트 진행 중간에 템플릿 경로가 추가된다면 서버를 재가동해야 올바르게 인식한다.
+
+### URLConf, Regular Expression
+
+* `url pattern`에 들어가는 것 각각의 의미는 다음과 같다.
+  - `(?P)` : 이 영역 문자열에 정규식을 적용하겠다.
+  - `\d+` : 정규식
+  - `<param>` : 정규식이 맞을 때, 넘길 인자
+  - `(?P<id>\d+)` : 문자열이 숫자라면 `id`인자로 해당 문자열을 넘긴다.
+
+### View Overview
+
+* 인자로 `HttpRequest`를 받고 반드시 `HttpResponse` 인스턴스를 리턴한다.
+* FBV(Function Based View), CBV(Class Based View)
+* CBV는 as_view()라는 클래스 함수를 통해 FBV를 생성해 주는 클래스이다.
+* FBV에 충분히 익숙해지면 CBV는 차후에 공부하기 편하다.
+
+
+---
+## Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)

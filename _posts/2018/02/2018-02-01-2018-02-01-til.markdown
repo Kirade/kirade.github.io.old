@@ -1,0 +1,25 @@
+---
+layout: "post"
+title: "2018-02-01 TIL"
+date: "2018-02-01 07:39"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Blog
+  - AskDjango 필기 노트 정리
+
+- 서울 방문
+  - 제주 코딩캠프 보강
+
+### To-Do
+
+* Two Scoops Of Django
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+### Reference
