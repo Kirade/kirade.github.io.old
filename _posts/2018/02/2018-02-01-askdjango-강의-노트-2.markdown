@@ -1,0 +1,54 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #2"
+date: "2018-02-01 12:54"
+category: Django
+tags: Django AskDjango
+---
+
+
+## Background
+[강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)에 이은 두 번째 강의 노트입니다.
+
+---
+## Study
+
+### Model & model Fields
+
+* 장고 모델은 RDMBS만을 지원한다.
+  - 만약 다른 NoSQL 종류의 데이터베이스를 사용할 경우, 사용은 가능하지만 장고 모델의 이점을 전혀 누릴 수 없다.
+* 장고가 ORM을 통해 쿼리를 만들어 주긴 하지만, SQL을 몰라도 된다는 의미는 아니다.
+  - 자신이 짠 코드가 생성하는 SQL이 맞게 작성된 것인지 검증 가능해야한다.
+* `Model`은 `DB table`, `Model Instance`는 `DB 테이블의 1 Row(Record)`와 매핑된다.
+* 장고 모델의 클래스 명은 단수형
+* 파이썬에서는 문자열의 길이 제한이 없어 필드의 구분이 필요 없을 듯 보이지만, DB에서는 길이 제한에 여부에 따라 다른 필드로 구분이된다. 따라서 다른 필드를 모델에서 정의한다.
+* 필드의 옵션인 `Null`은 DB필드에서의 `null`값이 들어 갈 수 있는지 여부를 확인한다. 반면에 비슷한 `Blank`는 Validation시에 빈 값을 허용하는지 체크한다.
+* `makemigration`혹은 `migrate`시에 `app-name`을 명시적으로 입력해 주어야 안전하다.
+* `django-extensions`를 이용하면 기존의 장고가 제공하는 `shell`의 기능을 시작할 때, 필요한 모듈들을 import 시켜주는 `shell_plus`를 사용할 수 있다. (앱 등록)
+* `ipython`,`Jupyter notebook`을 통해 일반 파이썬에서 제공하는 커맨드라인 보다 시각적으로 편한 도구가 제공된다. (추천)
+
+## CRUD
+
+* `Model Manager`는 데이터베이스 질의 인터페이스를 제공한다.
+  - `ModelCls.objects`로 접근
+
+  ```python
+  # example/views.py
+  from .modesl import Post
+
+  def post_list(request):
+    post_query_set = Post.objects.all()
+    return render(request, 'example/post_list.html', {'qs': post_query_set})
+  ```
+* `QuerySet`은 SQL을 생성해주는 인터페이스이다.
+* `QuerySet`을 가져왔을때의 기본 정렬은 `Model` 클래스 내의 정의되어 있는 `Meta.ordering`을 따라간다.
+* 데이터를 Fetch하는 방법
+  1. `QuerySet`을 순회하면서 각 인스턴스 접근
+  2. `QuerySet`의 인스턴스를 인덱싱을 통해 접근
+  3. `get(조건)`을 통해 접근 가능
+* 인스턴스를 업데이트 할 때, 각 레코드 별로 속성을 변경하고 `save()`함수를 통해 변경이 가능하나, `QuerySet`의 `update`함수를 사용하여 속성을 지정하면, 한 개의 SQL로 동작하므로 동작이 빠르다.
+  - 인스턴스를 삭제하는 경우도 마찬가지이다.
+
+---
+## Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
