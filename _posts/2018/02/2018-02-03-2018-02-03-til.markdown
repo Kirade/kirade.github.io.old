@@ -1,0 +1,22 @@
+---
+layout: "post"
+title: "2018-02-03 TIL"
+date: "2018-02-03 14:12"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Two Scoops of django
+  - 책 정독
+
+### To-Do
+
+* Two Scoops Of Django
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+### Reference
