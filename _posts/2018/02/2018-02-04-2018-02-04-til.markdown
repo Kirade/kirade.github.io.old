@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-02-04 TIL"
+date: "2018-02-04 23:13"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- AskDjango
+  - 템플릿 엔진, 필터, 폼
+
+### To-Do
+
+* Two Scoops Of Django
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+### Reference
+* [AskDjango](https://nomade.kr/vod/django/)
