@@ -27,7 +27,7 @@ tags: Django AskDjango
 * `django-extensions`를 이용하면 기존의 장고가 제공하는 `shell`의 기능을 시작할 때, 필요한 모듈들을 import 시켜주는 `shell_plus`를 사용할 수 있다. (앱 등록)
 * `ipython`,`Jupyter notebook`을 통해 일반 파이썬에서 제공하는 커맨드라인 보다 시각적으로 편한 도구가 제공된다. (추천)
 
-## CRUD
+### CRUD
 
 * `Model Manager`는 데이터베이스 질의 인터페이스를 제공한다.
   - `ModelCls.objects`로 접근

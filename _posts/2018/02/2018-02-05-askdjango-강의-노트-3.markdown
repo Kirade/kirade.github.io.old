@@ -1,0 +1,67 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #3"
+date: "2018-02-05 23:23"
+category: Django
+tags: Django AskDjango
+---
+
+## Background
+* [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
+* [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
+이전 강의노트에 이어 필기를 정리합니다.
+
+
+---
+## Study
+### Http Status Code
+  - 200 : 정상 응답
+  - 302 : 임시 URL로 이동
+  - 404 : 서버가 요청한 페이지를 찾을 수 없음
+  - 500 : 서버 오류 발생
+* 지정한 Record가 없는 것은 서버오류로 뜰 수 있지만, 이는 명백히 404 오류이다.
+  - 이를 위하여 `get_object_or_404`를 사용한다.
+
+### Model Relationship
+* 관계형 데이터베이스를 사용하여 관계가 있는 Record끼리 서로 연결이 가능하다.
+  - ForeignKey : 1:N (포스팅과 댓글)
+  - ManyToManyField : M:N (포스팅과 태그)
+  - OneToOneField : 1:1 (User과 Profile)
+    - ForeignKey와는 다르게 유일하게 존재한다.
+* 유저모델과 관계를 맺을 때에는 `settings.AUTH_USER_MODEL`을 참조하여 사용하는것이 좋다.
+* `on_delete`옵션
+  - `CASCADE`: 연결된 Row를 일괄 삭제 (기본)
+  - `PROTECT`: 삭제 예외 발생, 삭제 방지
+  - `SET_NULL`: `null=True`설정일 경우, 해당 필드를 null로 설정
+  - `SET_DEFAULT`: 필드에 지정된 기본값으로 설정    
+  - `SET`: 값, 함수를 지정하여 호출결과값을 지정
+  - `DO_NOTHING`: 아무것도 하지 않음, 대게의 DB에서는 오류발생
+- ForeignKey 에서 `related_name`지정 필요
+  - 1측에서 N측으로 접근 시의 속성명: `모델명소문자_set`이 기본이다.
+
+### Django Template Inheritance
+* 자식 템플릿은 `{% extends "부모템플릿경로" %}`가 최상단에 쓰여있어야 한다.
+* 자식 템플릿은 부모 템플릿으로부터 상속받은 block 영역에 대한 재정의만 가능하고 이외는 무시된다.
+* 2단계 상속을 추천한다.
+  - 프로젝트 전반, 앱의 전반을 구성하는 두 개의 부모로부터 상속
+
+### Django Template Loader
+* `app_directories.Loader`
+  -  `INSTALLED_APPS`에 설정된 앱 디렉토리 내 templates경로에서 템플릿 파일을 찾는다.
+* `filesystem.Loader`
+  - 별도의 경로에 지정해주면 해당 경로를 탐색한다.
+- 템플릿 로더는 서버 실행시 작동하여, 설정을 서버가 재시작하기 전까지 유지한다. 중간에 바뀌지 않음.
+
+### URL Reverse
+* 개발자가 URL을 일일히 계산하지 않도록 만들어 주었다.
+  - 중간에 URL이 바뀌더라도 일일히 추적하여 변경하지 않아도 된다.
+* `reverse`: 매칭 URL이 없다면 `NoReverseMatch`예외 발생
+* `resolve_url`: 매칭 URL이 없다면 인자 문자열 그대로 리턴, 내부적으로 `reverse` 사용
+* `redirect`: 매칭 Url이 없다면 인자 문자열을 URL로 판단, 내부적으로 `resolve_url`사용
+* `resolve_url` 함수는 모델 내의 `get_absolute_url`함수의 존재여부를 체크하고 있다면 해당 함수를 호출하여 결과값을 URL로 사용한다.
+* 특정 모델에 대한 `DetailView`를 작성할 때에는, 해당 뷰의 URLConf 설정 후, 반드시 `get_absolute_url`을 작성하면 코드가 간결해진다.
+
+
+---
+## Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
