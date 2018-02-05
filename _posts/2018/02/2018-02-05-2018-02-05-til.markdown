@@ -1,0 +1,26 @@
+---
+layout: "post"
+title: "2018-02-05 TIL"
+date: "2018-02-05 19:44"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- AskDjango
+  - Csrf, HttpRequest, HttpResponse, Django Form, Validation
+
+- Two Scoops Of Django
+  - ~ ch5
+
+### To-Do
+
+* Two Scoops Of Django
+* AskDjango 강의 수강
+* 노트필기 포스팅 하면서 정리
+
+### Reference
+* [AskDjango](https://nomade.kr/vod/django/)
