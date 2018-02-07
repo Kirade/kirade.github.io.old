@@ -1,0 +1,66 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #4"
+date: "2018-02-07 23:49"
+category: Django
+tags: Django AskDjango
+---
+
+## Background
+* [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
+* [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
+* [강의 노트 #3](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-3/)
+이전 강의노트에 이어 필기를 정리합니다.
+
+---
+## Study
+
+### Bootstrap3 & CSS style templates
+
+* Bootstrap을 사용하면 프론트앤드의 스타일을 일관되도록 만들 수 있다
+* Theme 을 활용하여 다른 테마를 적용할 수 있다.
+* CDN을 통해서 소스를 서빙, 혹은 소스를 다운 받아 서버에 관리 가능
+
+### Django Template Engine
+* 장고의 철학
+  - Fat Model, Stupid Template, Thin View
+    - 모델부분에 비중을 두어 무겁게 코딩하고, 템플릿과 뷰를 가볍게 한다
+* 장고의 템플릿엔진은 장고가 기본적으로 제공하는 엔진 이외의 써드파티 엔진들도 적용이 가능하다
+  - 템플릿 내의 비즈니스 로직을 지양하고, 뷰에서도 간단한 인자처리 정도만 권장한다.
+  - Jinja2, Mako, HamlPy
+  - 먼저, 장고 기본템플릿 엔진에 충분히 익숙해지는 것이 좋다
+- 장고 템플릿 엔진에서는 빌트인 태그들이 지원되고 커스텀 태그도 사용가능하다.
+- `{% comment "설명 %} ~ {% endcomment %}` 를 활용하여 코맨트 삽입이 가능하다.
+- `{% lorem %}`과 같은 유용한 태그가 많음
+- for문을 활용할 때 `{% empty %}`태그를 활용할 수 있다.
+
+### Django Template Filter
+* 템플릿 변수값 변한을 위한 함수이고, 다수 필터 함수를 연결가능하다.
+* `{{ 변수 | filter1:args1 | filter2:args2 }}` 에서 filter1의 첫번 째 인자는 변수이고 두 번 째 인자가 args1이다, 마찬가지로 filter2의 첫 번째 인자는 앞 필터를 통해 만들어진 변경된 변수 값이며, 두 번째 인자가 args2 이다.
+* `{{ datetime_obj|date:"D d M Y"}}` 와 같은 형식으로 날짜/시각을 적절한 형태로 출력할 수 있다.
+* `{{ value|linebreaks }}`는 빈 줄 단위로 <p> 태그로 감싸고 1개의 개행은 <br>로 출력한다.
+* `{{ value|linebreaksbr }}`는 모든 개행을 <br> 태그로 출력
+* slice, striptags, truncatechars, truncatewords, urlencode등 다양한 필터가 있다.
+
+### HTML Form
+* 장고에서 하나의 Form 태그는 하나 이상의 위젯을 가진다.
+* 파일 업로드를 위해서는 `<form>`태그의 메서드가 `POST`이고 `enctype="multipart/form-data"`이여야 한다.
+* 기본적으로 `enctype`은 `application/x-www-form-urlencoded`로 설정되어 있다.
+* GET방식이 헤더만 보내는 반면, POST방식은 Body부분을 같이 보내기 때문에, 파일처리와 같은 작업을 수행 할 수 있다.
+
+### Cross-site request forgery (CSRF)
+* 사용자가 의도하지 않게 글을 작성하거나, 쇼핑을 하게하는 등의 공격을 말한다
+* GET요청이 아닌 POST요청이 올 경우에, URLConf와 View 사이에서 작동하는 Middleware 중 `CsrfViewMiddleware`를 통해 csrf_token을 확인한다. 오류시에는 403 Forbidden 응답
+* 이는 유저인증 토큰과는 다른 개념이다.
+* `@csrf_exempt`장식자를 통해 해당 뷰의 토큰 확인을 제외시킬 수 있다.
+
+### HttpRequest and HttpResponse
+* 클라이언트로부터의 모든 요청 내용을 가지고 있다.
+  - `request.method`, `request.GET`, `request.POST`, `request.FILE`
+  - `MultiValueDict, QueryDict` 형태로 동일 키가 다수의 Value를 지원한다.
+  - `QueryDict`는 변경이 불가능하다. (Immutable)
+  - `HttpResponse`는 뷰 함수가 리턴하는 값이다.
+
+---
+## Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
