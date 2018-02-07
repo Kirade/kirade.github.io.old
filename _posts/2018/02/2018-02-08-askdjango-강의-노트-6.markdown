@@ -1,0 +1,71 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #6"
+date: "2018-02-08 01:30"
+category: Django
+tags: Django AskDjango
+---
+
+## Background
+* [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
+* [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
+* [강의 노트 #3](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-3/)
+* [강의 노트 #4](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-4/)
+* [강의 노트 #5](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-5/)
+이전 강의노트에 이어 필기를 정리합니다.
+
+---
+## Study
+
+### Static Files
+* Static 파일은 개발 리소스로서 정적인 파일들이다
+  - js, css, image, etc.
+- `STATIC_URL`은 해당 URL로 접근이 될때, 정적 파일을 찾게하는 URL이다.
+- `STATIC_ROOT`는 배포시 필요한 설정으로, 정적 파일들을 모아두는 위치를 지정한다.
+  - `python manage.py collectstatic`명령어로 프로젝트 내의 모든 정적 파일들을 해당 위치에 긁어온다.
+- `STATICFILES_DIRS`는 앱 디렉토리 내의 static 파일들 이외의 static 디렉토리로 정의해둔 경로를 리스트 형태로 지정해 둘 수 있다.
+- `Static Files Finders`는 `Template Loader`와 유사하게 동작한다.
+  - `AppDirectoriesFinder`는 앱내의 static 경로를 탐색한다.
+  - `FileSystemFinder`는 `settings.STATICFILES_DIR`의 포함된 경로를 탐색한다.
+  - 위의 두가지 finder를 통해 후보 디렉토리 리스트를 작성한다. 이는 서버 시작시 1회 작성된다.
+- 템플릿내에서 정적파일의 경로를 하드코딩 하기보다는 `static` 템플릿 태그를 사용한다.
+
+### Media Files
+* Media 파일은 유저가 업로드한 모든 정적인 파일이다
+  - image, file, etc.
+* 프로젝트 단위로 저장하고 서빙한다.
+  - 프로젝트 단위이기 때문에 Static 과는 다르게 따로 DIRS 디렉토리 지정이 필요하지 않다.
+- `MEDIA_URL`은 해당 주소로 접근 시, Media 파일로 접근이 가능하다.
+- `MEDIA_ROOT`는 해당 위치로 업로드된 파일들이 저장된다.
+- `FileField, ImageField`를 통해 파일 저장을 지원한다.
+  - 실제 파일을 데이터베이스에 저장하는 것이 아닌, 경로를 문자열 형태로 저장한다.
+  - 업로드 시 form의 `enctype`은 `multipart/form-data`로 지정해야 한다.
+  - 저장경로를 `upload_to`옵션을 통해 지정할 수 있다.
+
+### Image Thumbnail
+* 일반적으로 JPEG가 압축률이 높고 효율이 좋아 많이 사용된다.
+* PNG는 다른 포맷보다 선명하나, 용량이 크다.
+* GIF는 애니메이션을 지원한다.
+* `Pillow`와 `PILKit`을 통해 이미지 처리를 간편하게 할 수 있다.
+* `django-imagekit`을 활용하여 썸네일 생성가능
+  - `ImageSpecField`, `ProcessedIamgeField`
+
+### FormField Widget
+* 위젯은 UI 입력요소이다.
+* 폼 필드를 정의할 때 widget 옵션으로 지정하거나, 모델폼을 사용한다면, Meta 내의 widgets를 통해 필드명 : 위젯 형태의 사전형태로 정의가능하다.
+* 커스텀 위젯을 만들 때에는 render함수를 재정의하여 만든다.
+
+### Class Based View
+* 뷰는 Callable Object이다.
+* CBV는 FBV를 만들어주는 클래스이다.
+  - as_view()라는 클래스 메서드를 통해 생성
+- 구현은 복잡해도, 가져다 쓸때에는 간단하다.
+  - 정해진 시나리오를 벗어날 경우 복잡해질 경우가 많다.
+  - 따라서, FBV와 적절하게 섞어서 쓰는것이 좋다.
+- `reverse_lazy`는 모듈이 import될 때 `reverse`를 사용하면 정보를 가져올수 없는 정보를 호출 시점에 가져오기 위해 만들어졌다.
+  - 전역변수 혹은 클래스 변수에 사용된다.
+
+
+---
+## Reference
+* [AskDjango - VOD](https://nomade.kr/vod/django/)
