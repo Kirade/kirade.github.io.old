@@ -16,7 +16,7 @@ tag: TIL
 - Vi
   - 에디터 설정
   - 테마, vundle, plugins 설치
-  - 창 분할, nerdTree 사용법 연습
+  - 창 분할, nerdTree 사용법 연습:
 
 ### To-Do
 
