@@ -10,6 +10,7 @@ tags: Django AskDjango
 * [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
 * [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
 * [강의 노트 #3](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-3/)
+* [강의 노트 #4](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-4/)
 이전 강의노트에 이어 필기를 정리합니다.
 
 ---
@@ -48,7 +49,31 @@ tags: Django AskDjango
 - clean은 1회성의 유효성검사나, 다수 필드를 체크할때, 혹은 필드 값의 변경이 필요할 때 사용한다.
 
 ### Form Template Custom Render
-* 
+* 기본 스타일로 랜더링
+  - `form.as_table, form.as_p, form.as_ul`
+* `form`속성이 가지고있는 필드의 속성들에 직접 접근하여 값을 가져오고 이를 감싸는 HTML태그와 CSS를 수정하여 스타일을 필드별로 세세하게 지정이 가능하다.
+* 일괄적으로 `form`값을 `field`별로 순회하면서 일괄적으로 렌더링하는 방식이 있다.
+* 일괄적으로 하기보단 `visible/hidden`필드를 구분하여 렌더링하는것을 추천한다.
+  - `form.hidden_fields`, `form.visible_fields`로 구분하여 순회
+
+### Message Framework
+* 파이썬 로깅 모듈과 유사하게 레벨별로 필터가 된다. 주로 1회성 메시지로 사용한다.
+  - `DEBUG, INFO, SUCCESS, WARNING, ERROR`
+* 메시지를 뷰 함수내에서 등록하고, 템플릿에서 소비한다.
+```python
+from django.contrib import messages
+
+def post_new(request):
+  ...
+  # 방법 1
+  messages.add_message(request, messages.INFO, 'New Message')
+  # 방법 2
+  messages.info(request, 'New Message')
+  ...
+```
+* 기본적으로 템플릿에서 자주 사용되는 변수들은 요청시 따로 명시하지 않아도 장고에서 `Context Processors`를 통해 넘겨준다.
+  - `debug, request, auth, messages`
+
 
 ---
 ## Background

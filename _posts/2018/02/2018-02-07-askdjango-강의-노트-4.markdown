@@ -36,10 +36,8 @@ tags: Django AskDjango
 
 ### Django Template Filter
 * 템플릿 변수값 변한을 위한 함수이고, 다수 필터 함수를 연결가능하다.
-* `{{ 변수 | filter1:args1| filter2:args2 }}` 에서 filter1의 첫번 째 인자는 변수이고 두 번 째 인자가 args1이다, 마찬가지로 filter2의 첫 번째 인자는 앞 필터를 통해 만들어진 변경된 변수 값이며, 두 번째 인자가 args2 이다.
-* `{{ datetime_obj|date:"D d M Y"}}` 와 같은 형식으로 날짜/시각을 적절한 형태로 출력할 수 있다.
-* `{{ value|linebreaks }}`는 빈 줄 단위로 <p> 태그로 감싸고 1개의 개행은 <br>로 출력한다.
-* `{{ value|linebreaksbr }}`는 모든 개행을 <br> 태그로 출력
+* `linebreaks`는 빈 줄 단위로 <p> 태그로 감싸고 1개의 개행은 <br>로 출력한다.
+* `linebreaksbr`는 모든 개행을 <br> 태그로 출력
 * slice, striptags, truncatechars, truncatewords, urlencode등 다양한 필터가 있다.
 
 ### HTML Form
