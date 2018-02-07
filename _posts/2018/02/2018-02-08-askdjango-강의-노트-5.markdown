@@ -1,0 +1,55 @@
+---
+layout: "post"
+title: "[AskDjango] 강의 노트 #5"
+date: "2018-02-08 00:42"
+category: Django
+tags: Django AskDjango
+---
+
+## Background
+* [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
+* [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
+* [강의 노트 #3](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-3/)
+이전 강의노트에 이어 필기를 정리합니다.
+
+---
+## Study
+
+### Form
+* 모델 필드는 DB필드를 클래스화 한 것이고, 폼 필드는 HTML의 폼필드를 클래스화 한 것이다.
+* 입력 폼을 위한 HTML을 생성할 수 있고 검증할 수 있다.
+* `form.is_valid()`를 통해 검증된 값들은 `cleaned_data` 라는 변수에 저장된다.
+* 장고에서는 폼을 같은 URL내에서 폼의 Action에 따라 다르게 처리한다
+* 폼 필드의 `validator`에 리스트로 검증 함수를 등록할 수 있다. 검증에 실패하면 `ValidationError`를 발생시킨다.
+
+### ModelForm
+* 모델폼은 지정된 모델로부터 필드 정보를 읽어 form fields를 세팅한다.
+  - 따로 폼에 표시할 필드들을 일일히 정의하지 않아도 된다.
+- 유효성 검사에 통과한 값들은 저장한다.
+- `save()`함수를 통해 해당 입력된 값들을 추가한 모델 인스턴스를 반환한다.
+- `request.POST`에 대한 값 겂증을 끝내면 `cleaned_data`에 검증된 값이 저장되므로, 꼭 이를 활용하여 로직을 구성한다.
+  - 검증을 통해 값이 변화되는 경우가 있다.
+
+### Form Validation
+* `form.is_valid()`를 호출할 때 유효성 검사가 진행된다.
+  - `form.full_clean()` 호출
+  - 필드별 유효성 검사를 수행하고, `특정필드.clean()`을 통해 필드 검사 수행
+  - `form.clean()`를 호출하여 다수 필드 체크
+  - 에러가 있다면 False, 아니면 True
+* `ValidationError`가 발생하면 `form.add_error`를 통해 에러들이 기록된다.
+* 모델필드 정의시 validators 인자를 지원한다.
+* 폼 필드 정의시 validators 인자를 지원한다.
+* 폼 클래스 내의 clean멤버함수를 정의할 수 있다
+  - 값이 조건에 맞지않을 경우 `ValidationError`예외를 발생시키기도 하고, `add_error`를 통해 에러를 기록한다
+  - 원하는 포멧으로 값을 변경시켜 리턴 할 수 있다.
+  - `clean_필드명`을 통해 특정 필드별 검사/변경이 가능하다.
+  - `clean`을 통해 전체 필드에 대한 검사/변경이 가능하다.
+- 가급적이면 validator는 모델에 정의하고, 모델폼을 통해 validators정보를 같이 가져온다.
+- clean은 1회성의 유효성검사나, 다수 필드를 체크할때, 혹은 필드 값의 변경이 필요할 때 사용한다.
+
+### Form Template Custom Render
+* 
+
+---
+## Background
+* [AskDjango - VOD](https://nomade.kr/vod/django/)

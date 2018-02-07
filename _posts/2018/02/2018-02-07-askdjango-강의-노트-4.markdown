@@ -30,13 +30,13 @@ tags: Django AskDjango
   - Jinja2, Mako, HamlPy
   - 먼저, 장고 기본템플릿 엔진에 충분히 익숙해지는 것이 좋다
 - 장고 템플릿 엔진에서는 빌트인 태그들이 지원되고 커스텀 태그도 사용가능하다.
-- `{% comment "설명 %} ~ {% endcomment %}` 를 활용하여 코맨트 삽입이 가능하다.
-- `{% lorem %}`과 같은 유용한 태그가 많음
-- for문을 활용할 때 `{% empty %}`태그를 활용할 수 있다.
+- comment를 활용하여 코맨트 삽입이 가능하다.
+- lorem과 같은 유용한 태그가 많음
+- for문을 활용할 때 empty 태그를 활용할 수 있다.
 
 ### Django Template Filter
 * 템플릿 변수값 변한을 위한 함수이고, 다수 필터 함수를 연결가능하다.
-* `{{ 변수 | filter1:args1 | filter2:args2 }}` 에서 filter1의 첫번 째 인자는 변수이고 두 번 째 인자가 args1이다, 마찬가지로 filter2의 첫 번째 인자는 앞 필터를 통해 만들어진 변경된 변수 값이며, 두 번째 인자가 args2 이다.
+* `{{ 변수 | filter1:args1| filter2:args2 }}` 에서 filter1의 첫번 째 인자는 변수이고 두 번 째 인자가 args1이다, 마찬가지로 filter2의 첫 번째 인자는 앞 필터를 통해 만들어진 변경된 변수 값이며, 두 번째 인자가 args2 이다.
 * `{{ datetime_obj|date:"D d M Y"}}` 와 같은 형식으로 날짜/시각을 적절한 형태로 출력할 수 있다.
 * `{{ value|linebreaks }}`는 빈 줄 단위로 <p> 태그로 감싸고 1개의 개행은 <br>로 출력한다.
 * `{{ value|linebreaksbr }}`는 모든 개행을 <br> 태그로 출력
