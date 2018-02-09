@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-02-09 TIL"
+date: "2018-02-09 23:04"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Django
+  - Column App Model
+
+### To-Do
+
+* Two Scoops Of Django
+* tourblog 개발 진행
+
+### Reference
+* [AskDjango](https://nomade.kr/vod/django/)
+* [tourblog](https://github.com/Kirade/tourblog/)
