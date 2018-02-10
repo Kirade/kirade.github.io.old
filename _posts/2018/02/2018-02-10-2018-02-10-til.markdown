@@ -1,0 +1,21 @@
+---
+layout: "post"
+title: "2018-02-10 TIL"
+date: "2018-02-10 22:43"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Interview
+  - 면접 준비, 파이썬, 재개발 등
+
+### To-Do
+
+* Two Scoops Of Django
+* tourblog 개발 진행
+
+### Reference
