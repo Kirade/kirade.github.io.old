@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "2018-02-11 TIL"
+date: "2018-02-11 00:00"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Interview
+  - 파이썬 면접 기출문제 정리
+  - 운영체제, 네트워크, 알고리즘, 보안 기본개념 정리
+  - 과제 리팩토링
+
+### To-Do
+
+* Two Scoops Of Django
+* tourblog 개발 진행
+
+### Reference
