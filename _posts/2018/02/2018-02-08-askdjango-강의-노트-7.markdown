@@ -9,10 +9,10 @@ tags: Django AskDjango
 ## Background
 * [강의 노트 #1](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-1/)
 * [강의 노트 #2](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-2/)
-* [강의 노트 #3](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-3/)
-* [강의 노트 #4](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-4/)
-* [강의 노트 #5](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-5/)
-* [강의 노트 #6](https://kirade.github.io/django/2018/02/01/askdjango-강의-노트-6/)
+* [강의 노트 #3](https://kirade.github.io/django/2018/02/05/askdjango-강의-노트-3/)
+* [강의 노트 #4](https://kirade.github.io/django/2018/02/07/askdjango-강의-노트-4/)
+* [강의 노트 #5](https://kirade.github.io/django/2018/02/08/askdjango-강의-노트-5/)
+* [강의 노트 #6](https://kirade.github.io/django/2018/02/08/askdjango-강의-노트-6/)
 이전 강의노트에 이어 필기를 정리합니다.
 
 ---
