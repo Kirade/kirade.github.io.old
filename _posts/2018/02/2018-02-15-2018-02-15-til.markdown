@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-02-15 TIL"
+date: "2018-02-15 12:17"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Book
+  - import 키워드 파트 추가
+
+- Python
+  - Generator
+  - Default Value in python function
+    - mutable, immutable
+
+### To-Do
+
+* 설 명절 지내기
+* 배운내용 포스팅 ( MultiThread, MultiProcess, GIL)
+
+### Reference
+* [함수의 기본값(Default Parameter) - Kirade](https://kirade.github.io/python/2018/02/15/python-%ED%95%A8%EC%88%98-%EC%9D%B8%EC%9E%90%EC%9D%98-%EA%B8%B0%EB%B3%B8%EA%B0%92-default-parameter-value/)
