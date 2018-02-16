@@ -1,0 +1,25 @@
+---
+layout: "post"
+title: "2018-02-16 TIL"
+date: "2018-02-16 00:27"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Computer Science
+  - Process & Memory
+
+- Python
+  - Thread, Process, GIL
+  
+
+### To-Do
+
+* 설 명절 지내기
+* 배운내용 포스팅 ( MultiThread, MultiProcess, GIL)
+
+### Reference
