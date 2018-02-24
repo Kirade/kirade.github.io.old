@@ -1,0 +1,22 @@
+---
+layout: "post"
+title: "2018-02-24 TIL"
+date: "2018-02-24 15:10"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Blog
+  - 멀티 쓰레드, 멀티 프로세스
+  - 비동기 작업
+- AskDjango
+  - CBV강의 수강
+
+### To-Do
+
+### Reference
+* [AskDjango VOD](https://nomade.kr/vod/cbv/140/)
