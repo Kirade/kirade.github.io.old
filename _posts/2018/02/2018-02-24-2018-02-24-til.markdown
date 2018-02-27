@@ -10,11 +10,9 @@ tag: TIL
 
 ### What I Did
 
-- Blog
-  - 멀티 쓰레드, 멀티 프로세스
-  - 비동기 작업
 - AskDjango
   - CBV강의 수강
+  - 파이썬 차근차근 기초강의 수강
 
 ### To-Do
 

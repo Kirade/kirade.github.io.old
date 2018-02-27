@@ -1,0 +1,19 @@
+---
+layout: "post"
+title: "2018-02-25 TIL"
+date: "2018-02-25 17:43"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- AskDjango
+  - 파이썬 차근차근 기초강의 마무리
+
+### To-Do
+
+### Reference
+* [AskDjango VOD](https://nomade.kr/vod/python/94/)

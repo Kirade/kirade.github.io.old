@@ -1,0 +1,22 @@
+---
+layout: "post"
+title: "2018-02-27 TIL"
+date: "2018-02-27 22:39"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Git, Postgres 명령어 공부
+- Django
+  - Two Scoops of Django
+  - forms.Form 과 forms.ModelForm 비교
+  - FormView와 다른 CreateView, UpdateView 비교 정리
+
+### To-Do
+- TSD 공부 
+
+### Reference
