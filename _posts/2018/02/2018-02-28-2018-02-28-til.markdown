@@ -1,0 +1,24 @@
+---
+layout: "post"
+title: "2018-02-28 TIL"
+date: "2018-02-28 22:19"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Django
+  - Two Scoops of Django
+    - Ch11~ : form 유효성검사에 관한 내용
+  - Signal
+    - post_save, app.py의 ready메서드와 import
+  - 모델 인스턴스의 id값(자동으로 생성되는 pk)는 저장되기 이전에는 None
+
+### To-Do
+- TSD 공부
+- Signal 테스팅
+
+### Reference
