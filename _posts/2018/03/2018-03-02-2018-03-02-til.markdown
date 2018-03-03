@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "2018-03-02 TIL"
+date: "2018-03-02 16:24"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Two Scoops of django
+  - Signal과 대안
+  - Save 메서드 내의 구현, Manager를 통한 구현
+- Django
+  - 작업이 오래걸리는 트랜젝션에서 발생하는 긴 시간의 테이블락을 피하는 방법
+    - 하나의 트랜잭션으로 처리되는 migration에서 atomic=False 옵션
+  - 마이그레이션 내의 RunPython 메서드와 그 인자
+    - code, reverse_code, noop
+
+### To-Do
+
+* Two Scoops Of Django
+* 배운 내용 정리
+
+### Reference

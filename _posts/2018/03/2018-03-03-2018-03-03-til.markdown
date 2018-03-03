@@ -1,0 +1,21 @@
+---
+layout: "post"
+title: "2018-03-03 TIL"
+date: "2018-03-03 16:25"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Blog
+  - Signal의 대안
+  - Django의 Null = True
+
+### To-Do
+
+* Two Scoops Of Django
+
+### Reference
