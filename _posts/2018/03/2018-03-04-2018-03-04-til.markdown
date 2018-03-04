@@ -1,0 +1,26 @@
+---
+layout: "post"
+title: "2018-03-04 TIL"
+date: "2018-03-04 21:35"
+category: TIL
+tag: TIL
+---
+
+## Today I Learned
+
+### What I Did
+
+- Database
+  - Index란 어떤것인가?
+  - postgres 명령어
+
+- Book
+  - 일취월장
+
+### To-Do
+
+* Two Scoops Of Django
+
+### Reference
+* [인덱스란](http://mee2ro.tistory.com/1)
+* [DB Index 란?](https://lalwr.blogspot.kr/2016/02/db-index.html)
