@@ -20,6 +20,7 @@ tag: TIL
 ### To-Do
 
 * Two Scoops Of Django
+* 일취월장 독서
 
 ### Reference
 * [인덱스란](http://mee2ro.tistory.com/1)
