@@ -1,0 +1,108 @@
+---
+layout: "post"
+title: "[세미나] 5월 파이썬 격월 세미나"
+date: "2018-05-26 21:52"
+category: Python
+tags: Docker Python Django
+---
+
+# 2018년 5월 파이썬 격월 세미나
+
+###  파이썬 개발환경 끝판왕 Docker Compose (김승호님)
+##### @블로그 : raccoony's cave
+
+#### 배경
+ - 파이썬 개발환경을 세팅할 때, pip과 같은 것으로 설정하고 설치할때 여러가지 오류들을 만나게 된다.
+ - 개발 환경과 배포환경이 달라서 이런 문제를 여러번 겪을 수 있다.
+ - 왜 이런 경험이 생기는가? -> 소프트웨어가 성장하고, 의존성을 가진 패키지가 늘어나 문제가 발생할 지점이 많아진다.
+ - 이런 상황 때문에, 새로 들어오는 사람들이 개발환경을 설정하는데 어려움이 많다.
+- 따라서 Docker Compose를 제시한다.
+
+#### Docker Compose
+- 도커는 프로그램, 설정들을 추상화하여 컨테이너로 만들어 둠
+- 프로그램, 서버를 규격화 해서 만들어 둔다.
+
+##### 도커의 실행과정?
+- 도커의 이미지를 통해 도커 컨테이너를 만든다.
+- `$ docker run -it python:3`는 python3이미지를 통해 컨테이너를 만듬
+- `$ docker logs 4bs093018`에서 나오는 해쉬는 컨테이너이다.
+
+##### 웹 서버 실행에 필요한것?
+- 서버, 코드, 명령어, 환경변수, 서버 환경구성, 의존 패키지 설치
+- 이런것들을 모두 Docker에서 제공하고있다.
+- Dockerfile에서 나만의 이미지를 만들 수 있도록 설정할 수 있다.
+
+##### Docker Compose
+- docker 를 사용해서 개발 환경을 세팅할 때, 여러가지 세팅에 대한 복잡한 명령어가 많다.
+- 이를 docker-compose는 yml 설정파일에 설정값들을 넣고 `$ docker-compose up`명령어를 통해 간결하게 실행된다.
+- 이 방식의 장점은, yml 에 이력이 남아서 이력이 남고 추적하기 좋다.
+
+##### 명령어
+- `$ docker-compose up`
+- `$ docker-compose up -d` : 데몬방식
+- `$ docker-compose ps`
+- `$ docker-compose exec django bash` : django 컨테이너의 bash 접속
+- `$ docker-compose down` : 컨테이너들 종료
+
+##### QnA
+- sudo pip 는 root권한으로 패키지가 설치되어, 권한과 관련된 문제가 발생할 여지가 많다.
+- Docker를 실서비스에 잘 사용되고 있다. (구글, 페이스북 등 사용하고있는것으로 생각 )
+
+
+---
+
+### Django Channels 1.1x -> 2.0으로 옮기기 (임혜연님)
+
+##### 목적 애플리케이션
+- 웹애서 서버 작업 결과물을 지속적으로 관찰하고 싶었다.
+- websocket?
+- 장고 integration
+
+##### Channels 소개
+- asgi(Asynchronous Server Gateway Interface)
+- htp, websocket 지원
+- django 통합 기본으로 지원한다.
+- django view로 구현
+
+##### 1.x: 개념, 구현, 데
+- 채널 : 메시지 큐
+  - 일반 채널 : 서버가 처리할 이벤트에 대응
+  - 응답 채널 : 클라이언트에 대응
+- Consumer
+  - 채널로 들어온 메시지를 처리하고 응답 채널로 메시지 전송
+- Multiplexer / Demultiplexer
+  - 하나의 연결에서 여러 개의 논리적 스트림을 처리할 수 있게 한다.
+- Group
+  - 여러개의 응답 채널을 관리하며 직접 메시지 전송
+
+
+##### 2.x : 마이그레이션 배경, 개념, 구현, 데모
+- process supervisor 도입 필요
+
+##### Lessons learned
+- 문서를 꼼꼼하게 읽어야 한다.
+- 문서가 놓친 부분은 코드를 직접 살펴볼 수 있어야한다.
+
+---
+
+
+### 웹 디버깅시 유용하게 쓸 수 있는 도구들 (김슬님)
+- Quick & Dirty 한 작업을 할때 유용한 도구들
+
+##### Django Extensions
+- runserver_plus 를 통해 디버깅을 할때, 에러페이지에서 해당 context 중간에 콘솔 진입이 가능하다. ( 검은 콘솔 아이콘 클릭 )
+- 원하는 지점에 오류를 내고 싶다? -> `1/0`을 넣자 (ㅋㅋㅋ)
+- shell_plus는 장고 모델들, 자주쓰이는 db 관련 기능들 자동 import 해준다.
+
+##### Django Debug Toolbar
+- Middleware, Installed apps에 추가하면 간편하게 사용 가능
+- IP 설정해서 개발자만 허용하기도 가능
+- SQL과 같은 것들을 보여준다. 최적화 필요한 부분 표시해줌
+
+##### Ngrok
+- public 한 도메인을 만들어 두어, 로컬 개발 서버로 포팅해준다.
+- 4040과 같은 포트로 접근하면 로그를 기록해 준다. 접속 내역 이력 추적 가능하다.
+
+##### pyjog
+- 2주에 한번 주말에 모여서 가볍게 코딩 스터디 하는 모임
+- 매 6회 마다 '육회'를 먹음
