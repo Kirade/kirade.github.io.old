@@ -124,7 +124,7 @@ mysite
 일반적으로 장고는 View를 통해서 받은 요청에 대한 처리를 수행하고 응답합니다.
 
 `polls/views.py`에 다음과같이 입력하여, Index 페이지에 접근시 응답할 내용을 입력해봅니다.
-```Python
+```python
 # polls/views.py
 from django.http import HttpResponse
 
@@ -151,7 +151,7 @@ polls/
 ```
 
 계속해서 `urls.py`에는 다음과 같은 로직을 작성합니다.
-```Python
+```python
 # polls/urls.py
 from django.urls import path
 
@@ -164,7 +164,7 @@ urlpatterns = [
 
 그 다음으로는 프로젝트 단위의 `urls.py`를 설정합니다.
 이 파일은 프로젝트 디렉토리 바로 아래인 `mysite/urls.py`에 위치해 있습니다.
-```
+```python
 # mysite/urls.py
 from django.contrib import admin
 from django.urls import include, path
