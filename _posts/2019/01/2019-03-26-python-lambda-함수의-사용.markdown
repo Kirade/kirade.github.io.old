@@ -2,8 +2,8 @@
 layout: "post"
 title: "[Python] Lambda 함수의 사용"
 date: "2019-03-26 00:05"
-category: python
-tags: python
+category: Python
+tags: Python
 ---
 
 ## Background
